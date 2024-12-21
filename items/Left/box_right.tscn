@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://bchy81ahsqp3d"]
+
+[ext_resource type="Script" path="res://terror_function_left.gd" id="1_os357"]
+[ext_resource type="Shader" path="res://world.gdshader" id="2_w4l50"]
+[ext_resource type="Texture2D" uid="uid://dgf5314o3shax" path="res://sprites/bedroom items/Right/box_right.png" id="3_5lxq4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jxts8"]
+size = Vector2(26.5, 11)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_k31sr"]
+shader = ExtResource("2_w4l50")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 0.0
+
+[node name="box_right" type="Area2D"]
+script = ExtResource("1_os357")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.75, -4)
+shape = SubResource("RectangleShape2D_jxts8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_k31sr")
+texture = ExtResource("3_5lxq4")
+
+[node name="disappear_timer" type="Timer" parent="."]
+
+[node name="replace_timer" type="Timer" parent="."]
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="timeout" from="disappear_timer" to="." method="_on_disappear_timer_timeout"]
+[connection signal="timeout" from="replace_timer" to="." method="_on_replace_timer_timeout"]

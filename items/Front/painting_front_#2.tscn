@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://cbjlhi3h2b6be"]
+
+[ext_resource type="Script" path="res://terror_functions.gd" id="1_huubx"]
+[ext_resource type="Shader" path="res://world.gdshader" id="2_lpi14"]
+[ext_resource type="Texture2D" uid="uid://scsdfn2w2c13" path="res://sprites/bedroom items/Front/painting_front #2.png" id="3_usiy0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1qk7l"]
+size = Vector2(7, 6)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yuodl"]
+shader = ExtResource("2_lpi14")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 0.0
+
+[node name="painting_front #2" type="Area2D"]
+script = ExtResource("1_huubx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 3)
+shape = SubResource("RectangleShape2D_1qk7l")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_yuodl")
+texture = ExtResource("3_usiy0")
+
+[node name="disappear_timer" type="Timer" parent="."]
+
+[node name="replace_timer" type="Timer" parent="."]
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="timeout" from="disappear_timer" to="." method="_on_disappear_timer_timeout"]
+[connection signal="timeout" from="replace_timer" to="." method="_on_replace_timer_timeout"]

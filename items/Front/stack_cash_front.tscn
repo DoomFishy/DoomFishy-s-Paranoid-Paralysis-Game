@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://b2hydpdg5aucy"]
+
+[ext_resource type="Script" path="res://items/Front/scripts/stackCash_front.gd" id="1_d4b04"]
+[ext_resource type="Shader" path="res://world.gdshader" id="2_444xw"]
+[ext_resource type="Texture2D" uid="uid://cfdq6lias2uum" path="res://sprites/bedroom items/Left/stackCash_front.png" id="3_1v21d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r4ce6"]
+size = Vector2(8, 3)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kjns3"]
+shader = ExtResource("2_444xw")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 0.0
+
+[node name="stackCash_front" type="Area2D"]
+script = ExtResource("1_d4b04")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3, -1.5)
+shape = SubResource("RectangleShape2D_r4ce6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_kjns3")
+texture = ExtResource("3_1v21d")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://q3dhfjyrdge1"]
+
+[ext_resource type="Script" path="res://terror_functions.gd" id="1_0smxu"]
+[ext_resource type="Shader" path="res://world.gdshader" id="2_lm2ht"]
+[ext_resource type="Texture2D" uid="uid://2i4ihp35c2vd" path="res://sprites/bedroom items/Front/amogus.png" id="3_k5ou5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iu81m"]
+size = Vector2(5, 6)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_f3l7m"]
+shader = ExtResource("2_lm2ht")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 0.0
+
+[node name="amogus" type="Area2D"]
+script = ExtResource("1_0smxu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.5, 3)
+shape = SubResource("RectangleShape2D_iu81m")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_f3l7m")
+texture = ExtResource("3_k5ou5")
+
+[node name="disappear_timer" type="Timer" parent="."]
+
+[node name="replace_timer" type="Timer" parent="."]
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="timeout" from="disappear_timer" to="." method="_on_disappear_timer_timeout"]
+[connection signal="timeout" from="replace_timer" to="." method="_on_replace_timer_timeout"]

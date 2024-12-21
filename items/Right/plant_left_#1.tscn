@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://bncufi44tqoip"]
+
+[ext_resource type="Script" path="res://terror_function_right.gd" id="1_im8dl"]
+[ext_resource type="Shader" path="res://world.gdshader" id="2_25h2v"]
+[ext_resource type="Texture2D" uid="uid://b3s7lu8k37e1m" path="res://sprites/bedroom items/Left/plant_left #1.png" id="3_1paqo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l6rxy"]
+size = Vector2(8, 6)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pa48e"]
+shader = ExtResource("2_25h2v")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 0.0
+
+[node name="plant_left #1" type="Area2D"]
+script = ExtResource("1_im8dl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 0)
+shape = SubResource("RectangleShape2D_l6rxy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_pa48e")
+texture = ExtResource("3_1paqo")
+
+[node name="disappear_timer" type="Timer" parent="."]
+
+[node name="replace_timer" type="Timer" parent="."]
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="timeout" from="disappear_timer" to="." method="_on_disappear_timer_timeout"]
+[connection signal="timeout" from="replace_timer" to="." method="_on_replace_timer_timeout"]

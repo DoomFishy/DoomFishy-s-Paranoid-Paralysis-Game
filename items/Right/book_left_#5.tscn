@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://bnjwegxu6xl7o"]
+
+[ext_resource type="Script" path="res://terror_function_right.gd" id="1_ngycj"]
+[ext_resource type="Shader" path="res://world.gdshader" id="2_5mg61"]
+[ext_resource type="Texture2D" uid="uid://dcnvcxnmoadsd" path="res://sprites/bedroom items/Left/book_left #5.png" id="3_mnp4f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dxydb"]
+size = Vector2(10, 11)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ypc2e"]
+shader = ExtResource("2_5mg61")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 0.0
+
+[node name="book_left #5" type="Area2D"]
+script = ExtResource("1_ngycj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -2.5)
+shape = SubResource("RectangleShape2D_dxydb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_ypc2e")
+texture = ExtResource("3_mnp4f")
+
+[node name="disappear_timer" type="Timer" parent="."]
+
+[node name="replace_timer" type="Timer" parent="."]
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="timeout" from="disappear_timer" to="." method="_on_disappear_timer_timeout"]
+[connection signal="timeout" from="replace_timer" to="." method="_on_replace_timer_timeout"]

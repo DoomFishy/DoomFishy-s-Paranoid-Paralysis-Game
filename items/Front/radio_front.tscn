@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://b2y0oqlhsbjgx"]
+
+[ext_resource type="Script" path="res://items/Front/scripts/radio_front.gd" id="1_x35wf"]
+[ext_resource type="Shader" path="res://world.gdshader" id="2_2f68i"]
+[ext_resource type="Texture2D" uid="uid://bcq4d6wxjcser" path="res://sprites/bedroom items/Left/radio_front.png" id="3_f7ara"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5cvmn"]
+size = Vector2(13, 6)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mifvg"]
+shader = ExtResource("2_2f68i")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 0.0
+
+[node name="radio_front" type="Area2D"]
+script = ExtResource("1_x35wf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2.5, -1)
+shape = SubResource("RectangleShape2D_5cvmn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_mifvg")
+texture = ExtResource("3_f7ara")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

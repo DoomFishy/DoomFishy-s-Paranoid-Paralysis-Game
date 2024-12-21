@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://b1ajahledw0il"]
+
+[ext_resource type="Script" path="res://terror_function_left.gd" id="1_a7yhf"]
+[ext_resource type="Shader" path="res://world.gdshader" id="2_5y220"]
+[ext_resource type="Texture2D" uid="uid://djl3dcr3bj21h" path="res://sprites/bedroom items/Right/toy_car .png" id="3_ec0xl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pir70"]
+size = Vector2(13, 7.5)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_05o7u"]
+shader = ExtResource("2_5y220")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 0.0
+
+[node name="toy_car" type="Area2D"]
+script = ExtResource("1_a7yhf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3.5, -3.75)
+shape = SubResource("RectangleShape2D_pir70")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_05o7u")
+texture = ExtResource("3_ec0xl")
+
+[node name="disappear_timer" type="Timer" parent="."]
+
+[node name="replace_timer" type="Timer" parent="."]
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="timeout" from="disappear_timer" to="." method="_on_disappear_timer_timeout"]
+[connection signal="timeout" from="replace_timer" to="." method="_on_replace_timer_timeout"]

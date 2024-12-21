@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://bmecb3jonnm6x"]
+
+[ext_resource type="Shader" path="res://world.gdshader" id="1_pk8js"]
+[ext_resource type="Script" path="res://terror_functions.gd" id="1_vfph8"]
+[ext_resource type="Texture2D" uid="uid://2ahltg2544tb" path="res://sprites/bedroom items/Front/lamp_front .png" id="2_dxpx3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pg7oq"]
+size = Vector2(6.5, 10)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i2ajs"]
+shader = ExtResource("1_pk8js")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 0.0
+
+[node name="lamp_front" type="Area2D"]
+script = ExtResource("1_vfph8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.25, 1)
+shape = SubResource("RectangleShape2D_pg7oq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_i2ajs")
+texture = ExtResource("2_dxpx3")
+
+[node name="disappear_timer" type="Timer" parent="."]
+
+[node name="replace_timer" type="Timer" parent="."]
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="timeout" from="disappear_timer" to="." method="_on_disappear_timer_timeout"]
+[connection signal="timeout" from="replace_timer" to="." method="_on_replace_timer_timeout"]
