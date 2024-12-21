@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://3rkqsn3rkgxr"]
+
+[ext_resource type="Script" path="res://win_screen.gd" id="1_7lelu"]
+
+[node name="win screen" type="Node2D"]
+script = ExtResource("1_7lelu")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 49.0
+offset_top = 171.0
+offset_right = 1410.0
+offset_bottom = 424.0
+theme_override_font_sizes/font_size = 176
+text = "YOU WIN!!"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

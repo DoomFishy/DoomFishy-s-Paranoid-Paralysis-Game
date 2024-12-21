@@ -1,0 +1,42 @@
+[gd_scene load_steps=8 format=3 uid="uid://cdu2y0bx620qc"]
+
+[ext_resource type="Script" path="res://nightmare.gd" id="1_c204i"]
+[ext_resource type="Texture2D" uid="uid://dsketxy4xfhp6" path="res://nightmare 2.png" id="2_py0gq"]
+[ext_resource type="AudioStream" uid="uid://c68tc8of8hcb7" path="res://sounds/Door_squeeky_2.wav" id="3_2seh1"]
+[ext_resource type="AudioStream" uid="uid://buv0pg5dayano" path="res://sounds/alvin jumpscare.mp3" id="3_5ua6u"]
+[ext_resource type="AudioStream" uid="uid://cc2fie2hxau1w" path="res://sounds/Drawer_open_3.wav" id="4_h5rng"]
+[ext_resource type="AudioStream" uid="uid://bj0vb35l42pnw" path="res://sounds/Tone_Moaning_Deep_3.wav" id="6_o761j"]
+[ext_resource type="AudioStream" uid="uid://y5fd8ox6t6tj" path="res://sounds/Airy Breath.wav" id="7_8pkft"]
+
+[node name="nightmare" type="Node2D"]
+script = ExtResource("1_c204i")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_py0gq")
+
+[node name="move_timer" type="Timer" parent="."]
+wait_time = 0.4
+
+[node name="jumpscare noise" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_5ua6u")
+volume_db = -10.0
+pitch_scale = 1.2
+
+[node name="window open" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_h5rng")
+volume_db = 3.0
+
+[node name="window open squek" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_2seh1")
+volume_db = 3.0
+
+[node name="nightmare moan" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_o761j")
+volume_db = 3.0
+
+[node name="hits" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_8pkft")
+volume_db = -12.291
+
+[connection signal="timeout" from="move_timer" to="." method="_on_move_timer_timeout"]
+[connection signal="finished" from="jumpscare noise" to="." method="_on_jumpscare_noise_finished"]

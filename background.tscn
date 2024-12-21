@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://c8q7o7bi2u56a"]
+
+[ext_resource type="Texture2D" uid="uid://6p0t1n6u5i05" path="res://Backgrounds/parallax-demon-woods-far-trees-4.png.png" id="1_qu0nx"]
+[ext_resource type="Texture2D" uid="uid://d0rkqv3wqsyug" path="res://Backgrounds/parallax-demon-woods-far-trees-3.png.png" id="2_aw7qh"]
+[ext_resource type="Texture2D" uid="uid://sb4jfqnkxh1a" path="res://Backgrounds/parallax-demon-woods-far-trees-2.png.png" id="3_y4taf"]
+[ext_resource type="Texture2D" uid="uid://d1q2v7myw3bv2" path="res://Backgrounds/parallax-demon-woods-far-trees-1.png.png" id="4_yu1b1"]
+
+[node name="background" type="ParallaxBackground"]
+
+[node name="back" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1189, 0)
+
+[node name="Parallax-demon-woods-far-trees-4_png" type="Sprite2D" parent="back"]
+position = Vector2(319.5, 195)
+scale = Vector2(3.0625, 3.39706)
+texture = ExtResource("1_qu0nx")
+
+[node name="mid" type="ParallaxLayer" parent="."]
+
+[node name="Parallax-demon-woods-far-trees-3_png" type="Sprite2D" parent="mid"]
+position = Vector2(303, 141)
+scale = Vector2(3, 3)
+texture = ExtResource("2_aw7qh")
+
+[node name="Parallax-demon-woods-far-trees-3_png2" type="Sprite2D" parent="mid"]
+position = Vector2(2079, 141)
+scale = Vector2(3, 3)
+texture = ExtResource("2_aw7qh")
+
+[node name="light" type="ParallaxLayer" parent="."]
+
+[node name="Parallax-demon-woods-far-trees-2_png" type="Sprite2D" parent="light"]
+position = Vector2(301, 141)
+scale = Vector2(3, 3)
+texture = ExtResource("3_y4taf")
+
+[node name="Parallax-demon-woods-far-trees-2_png2" type="Sprite2D" parent="light"]
+position = Vector2(2077, 141)
+scale = Vector2(3, 3)
+texture = ExtResource("3_y4taf")
+
+[node name="Front" type="ParallaxLayer" parent="."]
+
+[node name="Parallax-demon-woods-far-trees-1_png" type="Sprite2D" parent="Front"]
+position = Vector2(301, 141)
+scale = Vector2(3, 3)
+texture = ExtResource("4_yu1b1")
+
+[node name="Parallax-demon-woods-far-trees-1_png2" type="Sprite2D" parent="Front"]
+position = Vector2(2077, 141)
+scale = Vector2(3, 3)
+texture = ExtResource("4_yu1b1")

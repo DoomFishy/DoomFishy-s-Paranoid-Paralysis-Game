@@ -1,0 +1,264 @@
+[gd_scene load_steps=29 format=3 uid="uid://bx6amsifvt5po"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_xo2kd"]
+[ext_resource type="Texture2D" uid="uid://6p0t1n6u5i05" path="res://Backgrounds/parallax-demon-woods-far-trees-4.png.png" id="2_e27ji"]
+[ext_resource type="Texture2D" uid="uid://d0rkqv3wqsyug" path="res://Backgrounds/parallax-demon-woods-far-trees-3.png.png" id="3_8u88s"]
+[ext_resource type="Texture2D" uid="uid://sb4jfqnkxh1a" path="res://Backgrounds/parallax-demon-woods-far-trees-2.png.png" id="4_eik71"]
+[ext_resource type="Texture2D" uid="uid://d1q2v7myw3bv2" path="res://Backgrounds/parallax-demon-woods-far-trees-1.png.png" id="5_a4cke"]
+[ext_resource type="Texture2D" uid="uid://dsketxy4xfhp6" path="res://nightmare 2.png" id="6_qsqow"]
+[ext_resource type="Texture2D" uid="uid://ccqabplqcikd1" path="res://Backgrounds/menu_bedroom (2).png" id="6_wy27n"]
+[ext_resource type="Texture2D" uid="uid://cd815gpibltxw" path="res://nightmare hand.png" id="8_38mgk"]
+[ext_resource type="Texture2D" uid="uid://cptt4d30sgxt4" path="res://Backgrounds/pixil-frame-0 (15).png" id="8_qlbjc"]
+[ext_resource type="Texture2D" uid="uid://ce43wjsqg7jep" path="res://menu_buttons/shelf_front.png" id="9_orl16"]
+[ext_resource type="Texture2D" uid="uid://biho3q2hpc3cy" path="res://menu_buttons/play_button_unpressed.png" id="11_3njmm"]
+[ext_resource type="Texture2D" uid="uid://1clkm2whvekg" path="res://sprites/bedroom items/Front/book_front #1.png" id="13_ose41"]
+[ext_resource type="Texture2D" uid="uid://cgp6wlj124l7j" path="res://sprites/bedroom items/Front/book_front #2.png" id="14_gosh4"]
+[ext_resource type="Texture2D" uid="uid://ngiqbg55lvp0" path="res://sprites/bedroom items/Front/book_front #4 (diagonal).png" id="15_tnnad"]
+[ext_resource type="Texture2D" uid="uid://bcq4d6wxjcser" path="res://sprites/bedroom items/Left/radio_front.png" id="16_874yi"]
+[ext_resource type="Texture2D" uid="uid://dup48qmx4ugak" path="res://sprites/bedroom items/Front/painting_front #1.png" id="17_4yid0"]
+[ext_resource type="Texture2D" uid="uid://c5se34jfjw6ho" path="res://sprites/bedroom items/Front/plant_front #1.png" id="18_2oi2t"]
+[ext_resource type="Texture2D" uid="uid://d4hsahgl5sccf" path="res://sprites/bedroom items/Front/book_front #5.png" id="19_8mfpd"]
+[ext_resource type="Texture2D" uid="uid://ci6km75c7bl0t" path="res://sprites/bedroom items/Front/book_front #6 (diagonal).png" id="20_sgj3f"]
+[ext_resource type="Texture2D" uid="uid://cyutsxskjw3jg" path="res://sprites/bedroom items/Front/book_front #7.png" id="21_aejk3"]
+[ext_resource type="Shader" path="res://world.gdshader" id="21_hp234"]
+[ext_resource type="Texture2D" uid="uid://den3en0fiifhm" path="res://menu_buttons/title (paranoid paralysis).png" id="23_bc7js"]
+[ext_resource type="AudioStream" uid="uid://clnjvatghsfk1" path="res://sounds/7. Shadow in the Woods.wav" id="23_q7b8b"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_v4yc8"]
+shader = ExtResource("21_hp234")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mnx5r"]
+size = Vector2(494, 168.5)
+
+[sub_resource type="Animation" id="Animation_4fakj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect3:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_auc3d"]
+resource_name = "transition_to_game"
+length = 1.5045
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect3:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"transition"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dab2v"]
+_data = {
+"RESET": SubResource("Animation_4fakj"),
+"transition_to_game": SubResource("Animation_auc3d")
+}
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_xo2kd")
+
+[node name="Background" type="Node2D" parent="."]
+position = Vector2(1606, 192)
+metadata/_edit_lock_ = true
+
+[node name="Parallax-demon-woods-far-trees-4_png" type="Sprite2D" parent="Background"]
+position = Vector2(319.5, 195)
+scale = Vector2(3.0625, 3.39706)
+texture = ExtResource("2_e27ji")
+
+[node name="Parallax-demon-woods-far-trees-3_png" type="Sprite2D" parent="Background"]
+position = Vector2(303, 141)
+scale = Vector2(3, 3)
+texture = ExtResource("3_8u88s")
+
+[node name="Parallax-demon-woods-far-trees-2_png" type="Sprite2D" parent="Background"]
+position = Vector2(301, 141)
+scale = Vector2(3, 3)
+texture = ExtResource("4_eik71")
+
+[node name="Parallax-demon-woods-far-trees-1_png" type="Sprite2D" parent="Background"]
+position = Vector2(301, 141)
+scale = Vector2(3, 3)
+texture = ExtResource("5_a4cke")
+
+[node name="nightmare1" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1260, 450)
+scale = Vector2(3.0025, 3.0025)
+texture = ExtResource("6_qsqow")
+
+[node name="nightmare2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1317, 459)
+scale = Vector2(8.51062, 8.51062)
+texture = ExtResource("6_qsqow")
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = 1065.0
+offset_top = 128.0
+offset_right = 1540.0
+offset_bottom = 706.0
+color = Color(0, 0, 0, 0.705882)
+metadata/_edit_lock_ = true
+
+[node name="MenuBedroom(2)" type="Sprite2D" parent="."]
+position = Vector2(851, 485)
+scale = Vector2(12.2459, 12.2459)
+texture = ExtResource("6_wy27n")
+metadata/_edit_lock_ = true
+
+[node name="nightmare3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1642, 1008)
+scale = Vector2(12.745, 12.745)
+texture = ExtResource("8_38mgk")
+
+[node name="Bed" type="Sprite2D" parent="."]
+modulate = Color(0.6, 0.6, 0.6, 1)
+position = Vector2(863, 323)
+scale = Vector2(12.2475, 16.1528)
+texture = ExtResource("8_qlbjc")
+
+[node name="accersories" type="Node2D" parent="."]
+
+[node name="ShelfFront" type="Sprite2D" parent="accersories"]
+position = Vector2(472, 393)
+scale = Vector2(30.535, 10.795)
+texture = ExtResource("9_orl16")
+
+[node name="ShelfFront2" type="Sprite2D" parent="accersories"]
+position = Vector2(267, 555)
+scale = Vector2(10, 10)
+texture = ExtResource("9_orl16")
+
+[node name="ShelfFront3" type="Sprite2D" parent="accersories"]
+position = Vector2(271, 743)
+scale = Vector2(11.62, 10)
+texture = ExtResource("9_orl16")
+
+[node name="BookFront#1" type="Sprite2D" parent="accersories"]
+position = Vector2(179, 377)
+scale = Vector2(10, 10)
+texture = ExtResource("13_ose41")
+
+[node name="BookFront#2" type="Sprite2D" parent="accersories"]
+position = Vector2(223, 378)
+scale = Vector2(10, 10)
+texture = ExtResource("14_gosh4")
+
+[node name="BookFront#4(diagonal)" type="Sprite2D" parent="accersories"]
+position = Vector2(262, 379)
+scale = Vector2(10, 10)
+texture = ExtResource("15_tnnad")
+
+[node name="PaintingFront#1" type="Sprite2D" parent="accersories"]
+position = Vector2(473, 568)
+scale = Vector2(10, 10)
+texture = ExtResource("17_4yid0")
+
+[node name="PlantFront#1" type="Sprite2D" parent="accersories"]
+position = Vector2(183, 570)
+scale = Vector2(10, 10)
+texture = ExtResource("18_2oi2t")
+
+[node name="BookFront#5" type="Sprite2D" parent="accersories"]
+position = Vector2(266, 568)
+scale = Vector2(10, 10)
+texture = ExtResource("19_8mfpd")
+
+[node name="BookFront#6(diagonal)" type="Sprite2D" parent="accersories"]
+position = Vector2(305, 569)
+scale = Vector2(10, 10)
+texture = ExtResource("20_sgj3f")
+
+[node name="BookFront#7" type="Sprite2D" parent="accersories"]
+position = Vector2(415, 582)
+scale = Vector2(10, 7.90625)
+texture = ExtResource("21_aejk3")
+
+[node name="RadioFront" type="Sprite2D" parent="accersories"]
+position = Vector2(412, 420)
+scale = Vector2(10, 10)
+texture = ExtResource("16_874yi")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -1173.0
+offset_top = -46.0
+offset_right = 3395.0
+offset_bottom = 1540.0
+color = Color(0, 0, 0, 0.243137)
+metadata/_edit_lock_ = true
+
+[node name="Title(paranoidParalysis)" type="Sprite2D" parent="."]
+position = Vector2(584, 217)
+scale = Vector2(1.16887, 2.05233)
+texture = ExtResource("23_bc7js")
+
+[node name="play_button" type="Area2D" parent="."]
+position = Vector2(374, 88)
+
+[node name="Sprite2D" type="Sprite2D" parent="play_button"]
+material = SubResource("ShaderMaterial_v4yc8")
+position = Vector2(441, 399)
+scale = Vector2(9.78125, 9.78125)
+texture = ExtResource("11_3njmm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="play_button"]
+position = Vector2(441, 396.75)
+shape = SubResource("RectangleShape2D_mnx5r")
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+visible = false
+offset_right = 2077.0
+offset_bottom = 1166.0
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_dab2v")
+}
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="flicker_time" type="Timer" parent="."]
+wait_time = 0.1
+
+[node name="music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("23_q7b8b")
+volume_db = 3.0
+pitch_scale = 0.69
+
+[connection signal="mouse_entered" from="play_button" to="." method="_on_play_button_mouse_entered"]
+[connection signal="mouse_exited" from="play_button" to="." method="_on_play_button_mouse_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="flicker_time" to="." method="_on_flicker_time_timeout"]
+[connection signal="finished" from="music" to="." method="_on_music_finished"]

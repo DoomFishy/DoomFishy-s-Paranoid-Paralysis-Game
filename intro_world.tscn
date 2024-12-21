@@ -1,0 +1,460 @@
+[gd_scene load_steps=43 format=3 uid="uid://dnrppc2304vr5"]
+
+[ext_resource type="Texture2D" uid="uid://6p0t1n6u5i05" path="res://Backgrounds/parallax-demon-woods-far-trees-4.png.png" id="1_5kbt6"]
+[ext_resource type="Script" path="res://intro_world.gd" id="1_txsx3"]
+[ext_resource type="Texture2D" uid="uid://d0rkqv3wqsyug" path="res://Backgrounds/parallax-demon-woods-far-trees-3.png.png" id="2_mkyso"]
+[ext_resource type="Texture2D" uid="uid://sb4jfqnkxh1a" path="res://Backgrounds/parallax-demon-woods-far-trees-2.png.png" id="3_d8agn"]
+[ext_resource type="Texture2D" uid="uid://d1q2v7myw3bv2" path="res://Backgrounds/parallax-demon-woods-far-trees-1.png.png" id="4_tf3j5"]
+[ext_resource type="Texture2D" uid="uid://bxpivggfc6lli" path="res://Backgrounds/bedroom.png" id="5_ou25p"]
+[ext_resource type="Texture2D" uid="uid://cr65tjsqb5qut" path="res://fake_wall.png" id="7_7viuh"]
+[ext_resource type="Texture2D" uid="uid://cuixn1a4h6d7i" path="res://Backgrounds/window_closed.png" id="8_bevfd"]
+[ext_resource type="Script" path="res://WindowClosed.gd" id="9_osi5o"]
+[ext_resource type="Texture2D" uid="uid://c1byd3y7tnw24" path="res://Backgrounds/window_open.png" id="10_cbth6"]
+[ext_resource type="Script" path="res://WindowOpen.gd" id="11_xkabn"]
+[ext_resource type="Script" path="res://intro_terror.gd" id="12_rm8tl"]
+[ext_resource type="Shader" path="res://world.gdshader" id="13_jv22y"]
+[ext_resource type="Texture2D" uid="uid://1clkm2whvekg" path="res://sprites/bedroom items/Front/book_front #1.png" id="14_tbfvs"]
+[ext_resource type="Texture2D" uid="uid://cgp6wlj124l7j" path="res://sprites/bedroom items/Front/book_front #2.png" id="15_wjc3n"]
+[ext_resource type="AudioStream" uid="uid://caigoe5pb0m8u" path="res://sounds/1. Piano in a Wood Cabin.wav" id="26_qtv45"]
+[ext_resource type="Shader" path="res://vignette.gdshader" id="26_whipw"]
+[ext_resource type="Script" path="res://terror_function_left.gd" id="31_33xkk"]
+[ext_resource type="Texture2D" uid="uid://dhag0gvlnn702" path="res://sprites/bedroom items/Right/painting_right #1.png" id="37_s3lfq"]
+[ext_resource type="Script" path="res://terror_function_right.gd" id="49_7pgbm"]
+[ext_resource type="Texture2D" uid="uid://dcnvcxnmoadsd" path="res://sprites/bedroom items/Left/book_left #5.png" id="54_1p0ka"]
+[ext_resource type="Texture2D" uid="uid://cptt4d30sgxt4" path="res://Backgrounds/pixil-frame-0 (15).png" id="63_gr3ey"]
+[ext_resource type="PackedScene" uid="uid://o8sq00rfqerk" path="res://player.tscn" id="64_wx5cv"]
+[ext_resource type="PackedScene" uid="uid://cuopidosd7m4x" path="res://insanity_bar.tscn" id="65_cebqc"]
+[ext_resource type="Script" path="res://Label.gd" id="66_s3vfi"]
+[ext_resource type="FontVariation" uid="uid://vk4gkhs4bbrt" path="res://game_font.tres" id="67_trrgs"]
+[ext_resource type="Script" path="res://num_terrors.gd" id="68_o25x5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_452te"]
+size = Vector2(135, 791)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tcq6h"]
+size = Vector2(4, 11)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8agsc"]
+resource_local_to_scene = true
+shader = ExtResource("13_jv22y")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gnquj"]
+size = Vector2(4, 11)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hian5"]
+resource_local_to_scene = true
+shader = ExtResource("13_jv22y")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1r8lg"]
+size = Vector2(8.5, 7)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_82oxu"]
+resource_local_to_scene = true
+shader = ExtResource("13_jv22y")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gcn81"]
+size = Vector2(10, 11)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_h6avm"]
+resource_local_to_scene = true
+shader = ExtResource("13_jv22y")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 0.0
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_qj2su"]
+light_mode = 1
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_uka0h"]
+shader = ExtResource("26_whipw")
+shader_parameter/vignette_intensity = 0.225
+shader_parameter/vignette_opacity = 1.0
+shader_parameter/vignette_rgb = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_fwaja"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect2:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect3:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_i6677"]
+resource_name = "change"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect3:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"changeScenes"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_707lx"]
+resource_name = "menu_to_game"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect2:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4va1l"]
+_data = {
+"RESET": SubResource("Animation_fwaja"),
+"change": SubResource("Animation_i6677"),
+"menu_to_game": SubResource("Animation_707lx")
+}
+
+[node name="intro world" type="Node2D"]
+script = ExtResource("1_txsx3")
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="Parallax-demon-woods-far-trees-4_png" type="Sprite2D" parent="Background"]
+position = Vector2(319.5, 195)
+scale = Vector2(3.0625, 3.39706)
+texture = ExtResource("1_5kbt6")
+
+[node name="Parallax-demon-woods-far-trees-3_png" type="Sprite2D" parent="Background"]
+position = Vector2(303, 141)
+scale = Vector2(3, 3)
+texture = ExtResource("2_mkyso")
+
+[node name="Parallax-demon-woods-far-trees-2_png" type="Sprite2D" parent="Background"]
+position = Vector2(301, 141)
+scale = Vector2(3, 3)
+texture = ExtResource("3_d8agn")
+
+[node name="Parallax-demon-woods-far-trees-1_png" type="Sprite2D" parent="Background"]
+position = Vector2(301, 141)
+scale = Vector2(3, 3)
+texture = ExtResource("4_tf3j5")
+
+[node name="RoomBack" type="Node2D" parent="."]
+
+[node name="Bedroom" type="Sprite2D" parent="RoomBack"]
+position = Vector2(578.167, 320)
+scale = Vector2(5.403, 5.403)
+texture = ExtResource("5_ou25p")
+metadata/_edit_lock_ = true
+
+[node name="RoomFront" type="Node2D" parent="."]
+
+[node name="FakeWall" type="Sprite2D" parent="RoomFront"]
+position = Vector2(578, 320)
+scale = Vector2(5.403, 5.403)
+texture = ExtResource("7_7viuh")
+metadata/_edit_lock_ = true
+
+[node name="WindowClosed" type="Sprite2D" parent="RoomFront"]
+position = Vector2(578, 316)
+scale = Vector2(5.403, 5.403)
+texture = ExtResource("8_bevfd")
+script = ExtResource("9_osi5o")
+metadata/_edit_lock_ = true
+
+[node name="WindowOpen" type="Sprite2D" parent="RoomFront"]
+position = Vector2(578, 315)
+scale = Vector2(5.403, 5.403)
+texture = ExtResource("10_cbth6")
+script = ExtResource("11_xkabn")
+metadata/_edit_lock_ = true
+
+[node name="borders" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="borders"]
+position = Vector2(-354, 314)
+shape = SubResource("RectangleShape2D_452te")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="borders"]
+position = Vector2(1529, 321)
+shape = SubResource("RectangleShape2D_452te")
+
+[node name="front" type="Node2D" parent="."]
+
+[node name="book_front #1" type="Area2D" parent="front"]
+position = Vector2(457, 306)
+scale = Vector2(5, 5)
+script = ExtResource("12_rm8tl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="front/book_front #1"]
+position = Vector2(-1, 0.5)
+shape = SubResource("RectangleShape2D_tcq6h")
+
+[node name="Sprite2D" type="Sprite2D" parent="front/book_front #1"]
+material = SubResource("ShaderMaterial_8agsc")
+texture = ExtResource("14_tbfvs")
+
+[node name="book_front #2" type="Area2D" parent="front"]
+position = Vector2(335, 209)
+scale = Vector2(5, 5)
+script = ExtResource("12_rm8tl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="front/book_front #2"]
+position = Vector2(-1, 0.5)
+shape = SubResource("RectangleShape2D_gnquj")
+
+[node name="Sprite2D" type="Sprite2D" parent="front/book_front #2"]
+material = SubResource("ShaderMaterial_hian5")
+texture = ExtResource("15_wjc3n")
+
+[node name="left" type="Node2D" parent="."]
+
+[node name="painting_right #1" type="Area2D" parent="left"]
+position = Vector2(-261, 358)
+scale = Vector2(5, 5)
+script = ExtResource("31_33xkk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="left/painting_right #1"]
+position = Vector2(1.25, -3.5)
+shape = SubResource("RectangleShape2D_1r8lg")
+
+[node name="Sprite2D" type="Sprite2D" parent="left/painting_right #1"]
+material = SubResource("ShaderMaterial_82oxu")
+texture = ExtResource("37_s3lfq")
+
+[node name="disappear_timer" type="Timer" parent="left/painting_right #1"]
+
+[node name="replace_timer" type="Timer" parent="left/painting_right #1"]
+
+[node name="right" type="Node2D" parent="."]
+
+[node name="book_left #5" type="Area2D" parent="right"]
+position = Vector2(1092, 514)
+scale = Vector2(5, 5)
+script = ExtResource("49_7pgbm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="right/book_left #5"]
+position = Vector2(-1, -2.5)
+shape = SubResource("RectangleShape2D_gcn81")
+
+[node name="Sprite2D" type="Sprite2D" parent="right/book_left #5"]
+material = SubResource("ShaderMaterial_h6avm")
+texture = ExtResource("54_1p0ka")
+
+[node name="disappear_timer" type="Timer" parent="right/book_left #5"]
+
+[node name="replace_timer" type="Timer" parent="right/book_left #5"]
+
+[node name="Bed" type="Sprite2D" parent="."]
+position = Vector2(570, 261)
+scale = Vector2(5.71833, 7.54167)
+texture = ExtResource("63_gr3ey")
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_left = -1183.0
+offset_top = -94.0
+offset_right = 2109.0
+offset_bottom = 719.0
+color = Color(0, 0, 0, 0.67451)
+metadata/_edit_lock_ = true
+
+[node name="Player" parent="." instance=ExtResource("64_wx5cv")]
+position = Vector2(412, 302)
+metadata/_edit_lock_ = true
+
+[node name="gui" type="CanvasLayer" parent="."]
+scale = Vector2(2.09, 2.09)
+transform = Transform2D(2.09, 0, 0, 2.09, 0, 0)
+
+[node name="insanity_bar" parent="gui" instance=ExtResource("65_cebqc")]
+material = SubResource("CanvasItemMaterial_qj2su")
+offset_left = 242.584
+offset_top = 8.13397
+offset_right = 1422.59
+offset_bottom = 636.138
+scale = Vector2(0.715, 0.715)
+metadata/_edit_lock_ = true
+
+[node name="Time" type="Label" parent="gui"]
+offset_left = 728.708
+offset_top = 3.82775
+offset_right = 828.708
+offset_bottom = 42.8278
+theme_override_font_sizes/font_size = 32
+text = "Time"
+script = ExtResource("66_s3vfi")
+metadata/_edit_lock_ = true
+
+[node name="num_terrors" type="Label" parent="gui"]
+texture_filter = 1
+offset_left = 12.9187
+offset_top = 405.263
+offset_right = 160.919
+offset_bottom = 435.263
+theme_override_fonts/font = ExtResource("67_trrgs")
+theme_override_font_sizes/font_size = 24
+text = "Terrors:"
+script = ExtResource("68_o25x5")
+metadata/_edit_lock_ = true
+
+[node name="tutorial texts" type="Node2D" parent="gui"]
+
+[node name="a and d" type="Label" parent="gui/tutorial texts"]
+offset_left = 97.1292
+offset_top = 48.3254
+offset_right = 739.129
+offset_bottom = 87.3254
+theme_override_font_sizes/font_size = 32
+text = "Press a and d to look around"
+
+[node name="find replace" type="Label" parent="gui/tutorial texts"]
+visible = false
+offset_left = 185.646
+offset_top = 40.1914
+offset_right = 1042.65
+offset_bottom = 118.191
+theme_override_font_sizes/font_size = 32
+text = "Left click to detect 
+        replaced item"
+
+[node name="find disappear" type="Label" parent="gui/tutorial texts"]
+visible = false
+offset_left = 185.646
+offset_top = 40.1914
+offset_right = 1042.65
+offset_bottom = 118.191
+theme_override_font_sizes/font_size = 32
+text = "Left click to detect 
+       disappeard  item"
+
+[node name="replace and disappear desc" type="Label" parent="gui/tutorial texts"]
+visible = false
+offset_left = 180.861
+offset_top = 363.636
+offset_right = 1037.86
+offset_bottom = 441.636
+theme_override_font_sizes/font_size = 18
+text = "(remember the original items in the room)
+the more changes there are to the room 
+              the sanity bar lowers faster"
+
+[node name="insanity bar" type="Label" parent="gui/tutorial texts"]
+visible = false
+offset_left = 143.062
+offset_top = 39.7129
+offset_right = 1000.06
+offset_bottom = 117.713
+theme_override_font_sizes/font_size = 32
+text = "hold space to replenish 
+                       insanity"
+
+[node name="insanity bar desc" type="Label" parent="gui/tutorial texts"]
+visible = false
+offset_left = 254.067
+offset_top = 366.986
+offset_right = 1111.07
+offset_bottom = 444.986
+theme_override_font_sizes/font_size = 18
+text = "      the lower sanity gets the
+      faster the monster moves"
+
+[node name="press enter" type="Label" parent="gui/tutorial texts"]
+visible = false
+offset_left = 147.847
+offset_top = 36.3636
+offset_right = 1004.85
+offset_bottom = 114.364
+theme_override_font_sizes/font_size = 32
+text = "press enter to continue
+                    good luck
+         Survive until 6 am"
+
+[node name="vignette" type="ColorRect" parent="gui"]
+material = SubResource("ShaderMaterial_uka0h")
+offset_left = 22.9665
+offset_top = -1.91388
+offset_right = 884.966
+offset_bottom = 458.086
+metadata/_edit_lock_ = true
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+visible = false
+offset_left = -1128.0
+offset_top = -86.0
+offset_right = 2164.0
+offset_bottom = 727.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+visible = false
+offset_left = -1128.0
+offset_top = -86.0
+offset_right = 2164.0
+offset_bottom = 727.0
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_4va1l")
+}
+
+[node name="music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("26_qtv45")
+volume_db = -6.0
+pitch_scale = 0.88
+
+[connection signal="mouse_entered" from="front/book_front #1" to="front/book_front #1" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="front/book_front #1" to="front/book_front #1" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="front/book_front #2" to="front/book_front #2" method="_on_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="front/book_front #2" to="front/book_front #2" method="_on_mouse_exited" flags=18]
+[connection signal="mouse_entered" from="left/painting_right #1" to="left/painting_right #1" method="_on_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="left/painting_right #1" to="left/painting_right #1" method="_on_mouse_exited" flags=18]
+[connection signal="timeout" from="left/painting_right #1/disappear_timer" to="left/painting_right #1" method="_on_disappear_timer_timeout" flags=18]
+[connection signal="timeout" from="left/painting_right #1/replace_timer" to="left/painting_right #1" method="_on_replace_timer_timeout" flags=18]
+[connection signal="mouse_entered" from="right/book_left #5" to="right/book_left #5" method="_on_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="right/book_left #5" to="right/book_left #5" method="_on_mouse_exited" flags=18]
+[connection signal="timeout" from="right/book_left #5/disappear_timer" to="right/book_left #5" method="_on_disappear_timer_timeout" flags=18]
+[connection signal="timeout" from="right/book_left #5/replace_timer" to="right/book_left #5" method="_on_replace_timer_timeout" flags=18]
+[connection signal="finished" from="music" to="." method="_on_music_finished"]

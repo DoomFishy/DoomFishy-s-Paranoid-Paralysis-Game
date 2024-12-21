@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://cpgadpmgu2avi"]
+
+[ext_resource type="Shader" path="res://world.gdshader" id="1_1vn6d"]
+[ext_resource type="Script" path="res://test_object.gd" id="1_yeg17"]
+[ext_resource type="Texture2D" uid="uid://dsgks4hyi6jrx" path="res://sprites/projectile.png" id="2_d12n6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q4he0"]
+size = Vector2(31, 6)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_y1df5"]
+shader = ExtResource("1_1vn6d")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 0.0
+
+[node name="Test_object" type="Area2D"]
+script = ExtResource("1_yeg17")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_q4he0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_y1df5")
+texture = ExtResource("2_d12n6")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

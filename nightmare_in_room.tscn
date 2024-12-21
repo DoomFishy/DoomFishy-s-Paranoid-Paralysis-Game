@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://g8r55kjd4d54"]
+
+[ext_resource type="Script" path="res://nightmare_in_room.gd" id="1_4j8g3"]
+[ext_resource type="Texture2D" uid="uid://ccq2nqt3tixlc" path="res://smile 3.png" id="2_p6ut6"]
+
+[node name="nightmare_in_room" type="Node2D"]
+script = ExtResource("1_4j8g3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_p6ut6")
+
+[node name="move_timer" type="Timer" parent="."]
+wait_time = 5.0
+
+[connection signal="timeout" from="move_timer" to="." method="_on_move_timer_timeout"]

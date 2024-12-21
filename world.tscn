@@ -1,0 +1,1379 @@
+[gd_scene load_steps=143 format=3 uid="uid://bofxqeveoelf7"]
+
+[ext_resource type="PackedScene" uid="uid://c8q7o7bi2u56a" path="res://background.tscn" id="1_klv1g"]
+[ext_resource type="Script" path="res://world.gd" id="1_uqbfg"]
+[ext_resource type="PackedScene" uid="uid://o8sq00rfqerk" path="res://player.tscn" id="2_v7q06"]
+[ext_resource type="Texture2D" uid="uid://b0kpt2qssm8jc" path="res://Backgrounds/pixil-frame-0 (14).png" id="3_0wa6q"]
+[ext_resource type="Texture2D" uid="uid://6p0t1n6u5i05" path="res://Backgrounds/parallax-demon-woods-far-trees-4.png.png" id="4_1uqgx"]
+[ext_resource type="Texture2D" uid="uid://cptt4d30sgxt4" path="res://Backgrounds/pixil-frame-0 (15).png" id="4_k5nc5"]
+[ext_resource type="Texture2D" uid="uid://d0rkqv3wqsyug" path="res://Backgrounds/parallax-demon-woods-far-trees-3.png.png" id="5_afqvp"]
+[ext_resource type="Texture2D" uid="uid://bxpivggfc6lli" path="res://Backgrounds/bedroom.png" id="5_gtehq"]
+[ext_resource type="Texture2D" uid="uid://cuixn1a4h6d7i" path="res://Backgrounds/window_closed.png" id="6_bromu"]
+[ext_resource type="Texture2D" uid="uid://sb4jfqnkxh1a" path="res://Backgrounds/parallax-demon-woods-far-trees-2.png.png" id="6_jk6tl"]
+[ext_resource type="Texture2D" uid="uid://cr65tjsqb5qut" path="res://fake_wall.png" id="6_lwhgi"]
+[ext_resource type="PackedScene" uid="uid://bmecb3jonnm6x" path="res://items/Front/lamp_front.tscn" id="7_2y0uy"]
+[ext_resource type="Texture2D" uid="uid://d1q2v7myw3bv2" path="res://Backgrounds/parallax-demon-woods-far-trees-1.png.png" id="7_fq3yk"]
+[ext_resource type="Script" path="res://WindowClosed.gd" id="8_pl25k"]
+[ext_resource type="Texture2D" uid="uid://c1byd3y7tnw24" path="res://Backgrounds/window_open.png" id="9_pilly"]
+[ext_resource type="Script" path="res://WindowOpen.gd" id="10_y063u"]
+[ext_resource type="Script" path="res://terror_functions.gd" id="11_821i3"]
+[ext_resource type="Texture2D" uid="uid://1clkm2whvekg" path="res://sprites/bedroom items/Front/book_front #1.png" id="13_w7b70"]
+[ext_resource type="Texture2D" uid="uid://cgp6wlj124l7j" path="res://sprites/bedroom items/Front/book_front #2.png" id="14_kq20x"]
+[ext_resource type="PackedScene" uid="uid://ccc5dcdpfgiqo" path="res://items/Front/painting_front_#4.tscn" id="14_ls7no"]
+[ext_resource type="PackedScene" uid="uid://ye7rhd1u6aro" path="res://items/Front/plant_front_#2.tscn" id="15_hvcse"]
+[ext_resource type="Texture2D" uid="uid://b814w3obbksx8" path="res://sprites/bedroom items/Front/bottle_front #1.png" id="15_vcvoa"]
+[ext_resource type="PackedScene" uid="uid://874n47db6xqm" path="res://items/Front/plant_front_#3.tscn" id="16_c6xuw"]
+[ext_resource type="Texture2D" uid="uid://cyutsxskjw3jg" path="res://sprites/bedroom items/Front/book_front #7.png" id="24_w5rnm"]
+[ext_resource type="Texture2D" uid="uid://c30ygrxk1gk28" path="res://sprites/bedroom items/Front/ball_front.png" id="26_od1po"]
+[ext_resource type="PackedScene" uid="uid://q3dhfjyrdge1" path="res://items/Front/amogus.tscn" id="27_1mtiq"]
+[ext_resource type="Script" path="res://terror_function_left.gd" id="27_4ehfd"]
+[ext_resource type="PackedScene" uid="uid://nokavc3wa5wr" path="res://items/Front/painting_front_#3.tscn" id="27_uccx3"]
+[ext_resource type="Texture2D" uid="uid://bc260fniu47nx" path="res://sprites/bedroom items/Right/book_right #2 (mid).png" id="28_3l63q"]
+[ext_resource type="Shader" path="res://world.gdshader" id="28_nyh8v"]
+[ext_resource type="Texture2D" uid="uid://dgf5314o3shax" path="res://sprites/bedroom items/Right/box_right.png" id="30_vvokb"]
+[ext_resource type="Texture2D" uid="uid://bllue61hltsnr" path="res://sprites/bedroom items/Right/box_right (small).png" id="31_rl1og"]
+[ext_resource type="Texture2D" uid="uid://drnmymdwtjnv" path="res://sprites/bedroom items/Right/cup_right #1.png" id="32_4dei8"]
+[ext_resource type="Texture2D" uid="uid://dhag0gvlnn702" path="res://sprites/bedroom items/Right/painting_right #1.png" id="33_0bo7l"]
+[ext_resource type="Texture2D" uid="uid://cx5d0qf34phgc" path="res://sprites/bedroom items/Right/painting_right #3.png" id="35_am2cv"]
+[ext_resource type="Texture2D" uid="uid://dyukwvqo6kmki" path="res://sprites/bedroom items/Right/plant_right #1.png" id="36_ysnoc"]
+[ext_resource type="Texture2D" uid="uid://5455dedjgl6h" path="res://sprites/bedroom items/Right/plant_right #2.png" id="37_gh3j0"]
+[ext_resource type="Texture2D" uid="uid://yq1uyo5r6kdv" path="res://sprites/bedroom items/Right/plant_right #3.png" id="38_cveqn"]
+[ext_resource type="Texture2D" uid="uid://bdtrnbpo3vmhj" path="res://sprites/bedroom items/Right/rabbit thingy.png" id="40_k6hct"]
+[ext_resource type="Texture2D" uid="uid://djl3dcr3bj21h" path="res://sprites/bedroom items/Right/toy_car .png" id="41_xnp2x"]
+[ext_resource type="Texture2D" uid="uid://xba1u8omg80y" path="res://pixil-frame-0.png" id="45_mc3hh"]
+[ext_resource type="PackedScene" uid="uid://cdu2y0bx620qc" path="res://nightmare.tscn" id="51_qxqwt"]
+[ext_resource type="Script" path="res://terror_function_right.gd" id="52_epjwg"]
+[ext_resource type="Texture2D" uid="uid://bn5j7hekbl42e" path="res://sprites/bedroom items/Left/book_left #1.png" id="53_wg774"]
+[ext_resource type="Texture2D" uid="uid://dqmw5gbd7qaar" path="res://sprites/bedroom items/Left/book_left #2.png" id="54_jn6hg"]
+[ext_resource type="Script" path="res://num_terrors.gd" id="55_73vhr"]
+[ext_resource type="Texture2D" uid="uid://o6v8wg1povru" path="res://sprites/bedroom items/Left/book_left #3.png" id="55_p2rhd"]
+[ext_resource type="Texture2D" uid="uid://8lfvtobjc8qq" path="res://sprites/bedroom items/Left/book_left #4.png" id="56_xcvq7"]
+[ext_resource type="Texture2D" uid="uid://dcnvcxnmoadsd" path="res://sprites/bedroom items/Left/book_left #5.png" id="57_k316s"]
+[ext_resource type="Texture2D" uid="uid://cumxtcqu4y854" path="res://sprites/bedroom items/Left/box_left.png" id="58_pbdl3"]
+[ext_resource type="Texture2D" uid="uid://b3s7lu8k37e1m" path="res://sprites/bedroom items/Left/plant_left #1.png" id="59_eg5va"]
+[ext_resource type="Texture2D" uid="uid://c0qiopykuhv5a" path="res://sprites/bedroom items/Right/book_right #5 (midish top).png" id="59_mx2wk"]
+[ext_resource type="Texture2D" uid="uid://cd815gpibltxw" path="res://nightmare hand.png" id="60_afftr"]
+[ext_resource type="Texture2D" uid="uid://dv5xcbawm1kqa" path="res://sprites/bedroom items/Left/plant_left #2.png" id="60_w4pt6"]
+[ext_resource type="Texture2D" uid="uid://bw161ctq43aa" path="res://sprites/bedroom items/Left/plant_left #3.png" id="61_gs0ii"]
+[ext_resource type="Texture2D" uid="uid://ulhtnc3ochs3" path="res://sprites/bedroom items/Right/book_right #6 (midish top).png" id="61_xrdfg"]
+[ext_resource type="Texture2D" uid="uid://y1qnv4troye1" path="res://sprites/bedroom items/Left/toy_left.png" id="62_umsdu"]
+[ext_resource type="Texture2D" uid="uid://btkp30b027x8s" path="res://sprites/bedroom items/Left/toy_left #2.png" id="63_w4mjb"]
+[ext_resource type="Texture2D" uid="uid://di4o6k1nfryfn" path="res://sprites/bedroom items/Left/trophy_left.png" id="64_bi7i4"]
+[ext_resource type="Texture2D" uid="uid://dkwdcriqyxxhc" path="res://sprites/bedroom items/Front/book_front #6.png" id="64_crrws"]
+[ext_resource type="PackedScene" uid="uid://b2y0oqlhsbjgx" path="res://items/Front/radio_front.tscn" id="65_pkccg"]
+[ext_resource type="PackedScene" uid="uid://btopww4odf1ud" path="res://items/Front/book_front_#3_(diagonal).tscn" id="66_gqu6e"]
+[ext_resource type="FontVariation" uid="uid://vk4gkhs4bbrt" path="res://game_font.tres" id="69_6qln4"]
+[ext_resource type="Script" path="res://eye.gd" id="69_p58c2"]
+[ext_resource type="Script" path="res://Label.gd" id="70_mxsfs"]
+[ext_resource type="Shader" path="res://vignette.gdshader" id="73_1vbk5"]
+[ext_resource type="Texture2D" uid="uid://bnyhhdhsta6m3" path="res://light.png" id="73_av7x5"]
+[ext_resource type="Script" path="res://grace_period time.gd" id="73_qo6vw"]
+[ext_resource type="AudioStream" uid="uid://d3jev6ujd3k8u" path="res://sounds/Rain_Medium_2.wav" id="76_6cte1"]
+[ext_resource type="AudioStream" uid="uid://drydvoqpto85u" path="res://sounds/NDKG_CreepyAtmosphere_Looped.wav" id="77_gwi2p"]
+[ext_resource type="AudioStream" uid="uid://864q18dkx2jn" path="res://sounds/Slow Sneezing.wav" id="78_yqapu"]
+[ext_resource type="AudioStream" uid="uid://bblw05206sjwc" path="res://sounds/Ghost Wind.wav" id="79_1bgm0"]
+[ext_resource type="PackedScene" uid="uid://cuopidosd7m4x" path="res://insanity_bar.tscn" id="89_ca27q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_84inu"]
+size = Vector2(135, 791)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m7h76"]
+size = Vector2(4, 11)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dd2ri"]
+resource_local_to_scene = true
+shader = ExtResource("28_nyh8v")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8oev0"]
+size = Vector2(4, 11)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_k5kew"]
+resource_local_to_scene = true
+shader = ExtResource("28_nyh8v")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vgj77"]
+size = Vector2(6.5, 10.5)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xmc7j"]
+resource_local_to_scene = true
+shader = ExtResource("28_nyh8v")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tjsl3"]
+size = Vector2(8, 8)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ybab2"]
+resource_local_to_scene = true
+shader = ExtResource("28_nyh8v")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m2scc"]
+size = Vector2(4, 11)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_y47xb"]
+resource_local_to_scene = true
+shader = ExtResource("28_nyh8v")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6igav"]
+size = Vector2(4, 11)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kpgrc"]
+resource_local_to_scene = true
+shader = ExtResource("28_nyh8v")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gy05e"]
+size = Vector2(8, 10)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_f68v5"]
+resource_local_to_scene = true
+shader = ExtResource("28_nyh8v")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jxts8"]
+size = Vector2(26.5, 11)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_k31sr"]
+resource_local_to_scene = true
+shader = ExtResource("28_nyh8v")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iyj1d"]
+size = Vector2(11, 8)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mpk4n"]
+resource_local_to_scene = true
+shader = ExtResource("28_nyh8v")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cc0sg"]
+size = Vector2(7, 5)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5l7sg"]
+resource_local_to_scene = true
+shader = ExtResource("28_nyh8v")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xjf5e"]
+size = Vector2(8.5, 7)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4gn58"]
+resource_local_to_scene = true
+shader = ExtResource("28_nyh8v")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g5svc"]
+size = Vector2(9, 7.5)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7aso2"]
+resource_local_to_scene = true
+shader = ExtResource("28_nyh8v")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5nto5"]
+size = Vector2(8, 6)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_a06qb"]
+resource_local_to_scene = true
+shader = ExtResource("28_nyh8v")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wdcy7"]
+size = Vector2(8, 6)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1prvc"]
+resource_local_to_scene = true
+shader = ExtResource("28_nyh8v")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_voy3f"]
+size = Vector2(8, 6)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_85rka"]
+resource_local_to_scene = true
+shader = ExtResource("28_nyh8v")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p4y2b"]
+size = Vector2(5, 9)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pgmge"]
+resource_local_to_scene = true
+shader = ExtResource("28_nyh8v")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v6x63"]
+size = Vector2(13, 7.5)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mvwfj"]
+resource_local_to_scene = true
+shader = ExtResource("28_nyh8v")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i8csj"]
+size = Vector2(7, 10)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hwla6"]
+resource_local_to_scene = true
+shader = ExtResource("28_nyh8v")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7664f"]
+size = Vector2(7, 10)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3oj71"]
+resource_local_to_scene = true
+shader = ExtResource("28_nyh8v")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6dtyi"]
+size = Vector2(6.2, 11)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sjuny"]
+resource_local_to_scene = true
+shader = ExtResource("28_nyh8v")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d7ui0"]
+size = Vector2(6.40001, 11)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_s12xu"]
+resource_local_to_scene = true
+shader = ExtResource("28_nyh8v")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ec2g5"]
+size = Vector2(10, 11)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6ogbu"]
+resource_local_to_scene = true
+shader = ExtResource("28_nyh8v")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cax62"]
+size = Vector2(6.40001, 11)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_uu0yk"]
+resource_local_to_scene = true
+shader = ExtResource("28_nyh8v")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dxydb"]
+size = Vector2(10, 11)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ypc2e"]
+resource_local_to_scene = true
+shader = ExtResource("28_nyh8v")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_romrs"]
+size = Vector2(11, 8)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ppp1t"]
+resource_local_to_scene = true
+shader = ExtResource("28_nyh8v")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l6rxy"]
+size = Vector2(8, 6)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pa48e"]
+resource_local_to_scene = true
+shader = ExtResource("28_nyh8v")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6kewx"]
+size = Vector2(8, 6)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ffd04"]
+resource_local_to_scene = true
+shader = ExtResource("28_nyh8v")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ec72m"]
+size = Vector2(8, 5)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3rf8w"]
+resource_local_to_scene = true
+shader = ExtResource("28_nyh8v")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4nmk6"]
+size = Vector2(8, 8.5)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_f0fd4"]
+resource_local_to_scene = true
+shader = ExtResource("28_nyh8v")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d4pv8"]
+size = Vector2(8, 9.5)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7oewi"]
+resource_local_to_scene = true
+shader = ExtResource("28_nyh8v")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_egj6j"]
+size = Vector2(7, 9)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ur4al"]
+resource_local_to_scene = true
+shader = ExtResource("28_nyh8v")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 0.0
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_teyk4"]
+light_mode = 1
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xsrb1"]
+shader = ExtResource("73_1vbk5")
+shader_parameter/vignette_intensity = 0.225
+shader_parameter/vignette_opacity = 1.0
+shader_parameter/vignette_rgb = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_fwaja"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect2:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("gui/vignette:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_i6677"]
+resource_name = "change"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("gui/vignette:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"changeScenes"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_707lx"]
+resource_name = "menu_to_game"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect2:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4va1l"]
+_data = {
+"RESET": SubResource("Animation_fwaja"),
+"change": SubResource("Animation_i6677"),
+"menu_to_game": SubResource("Animation_707lx")
+}
+
+[node name="world" type="Node2D"]
+script = ExtResource("1_uqbfg")
+
+[node name="scrap" type="Node2D" parent="."]
+
+[node name="Bedroom" type="Sprite2D" parent="scrap"]
+visible = false
+position = Vector2(578.167, 320)
+scale = Vector2(5.40278, 5.40278)
+texture = ExtResource("3_0wa6q")
+metadata/_edit_lock_ = true
+
+[node name="Pixil-frame-0" type="Sprite2D" parent="scrap/Bedroom"]
+visible = false
+position = Vector2(31.6195, -2.40617)
+scale = Vector2(0.29665, 0.29665)
+texture = ExtResource("45_mc3hh")
+
+[node name="background" parent="." instance=ExtResource("1_klv1g")]
+visible = false
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="Parallax-demon-woods-far-trees-4_png" type="Sprite2D" parent="Background"]
+position = Vector2(319.5, 195)
+scale = Vector2(3.0625, 3.39706)
+texture = ExtResource("4_1uqgx")
+metadata/_edit_lock_ = true
+
+[node name="Parallax-demon-woods-far-trees-3_png" type="Sprite2D" parent="Background"]
+position = Vector2(303, 141)
+scale = Vector2(3, 3)
+texture = ExtResource("5_afqvp")
+metadata/_edit_lock_ = true
+
+[node name="Parallax-demon-woods-far-trees-2_png" type="Sprite2D" parent="Background"]
+position = Vector2(301, 141)
+scale = Vector2(3, 3)
+texture = ExtResource("6_jk6tl")
+metadata/_edit_lock_ = true
+
+[node name="Parallax-demon-woods-far-trees-1_png" type="Sprite2D" parent="Background"]
+position = Vector2(301, 141)
+scale = Vector2(3, 3)
+texture = ExtResource("7_fq3yk")
+metadata/_edit_lock_ = true
+
+[node name="RoomBack" type="Node2D" parent="."]
+
+[node name="Bedroom" type="Sprite2D" parent="RoomBack"]
+position = Vector2(578.167, 320)
+scale = Vector2(5.403, 5.403)
+texture = ExtResource("5_gtehq")
+metadata/_edit_lock_ = true
+
+[node name="nightmare" parent="." instance=ExtResource("51_qxqwt")]
+position = Vector2(284, 1283)
+scale = Vector2(6.803, 6.803)
+
+[node name="RoomFront" type="Node2D" parent="."]
+
+[node name="FakeWall" type="Sprite2D" parent="RoomFront"]
+position = Vector2(578, 320)
+scale = Vector2(5.403, 5.403)
+texture = ExtResource("6_lwhgi")
+metadata/_edit_lock_ = true
+
+[node name="WindowClosed" type="Sprite2D" parent="RoomFront"]
+position = Vector2(578, 316)
+scale = Vector2(5.403, 5.403)
+texture = ExtResource("6_bromu")
+script = ExtResource("8_pl25k")
+metadata/_edit_lock_ = true
+
+[node name="WindowOpen" type="Sprite2D" parent="RoomFront"]
+position = Vector2(578, 315)
+scale = Vector2(5.403, 5.403)
+texture = ExtResource("9_pilly")
+script = ExtResource("10_y063u")
+metadata/_edit_lock_ = true
+
+[node name="borders" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="borders"]
+visible = false
+position = Vector2(-354, 314)
+shape = SubResource("RectangleShape2D_84inu")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="borders"]
+position = Vector2(1529, 321)
+shape = SubResource("RectangleShape2D_84inu")
+metadata/_edit_lock_ = true
+
+[node name="front" type="Node2D" parent="."]
+
+[node name="book_front #1" type="Area2D" parent="front"]
+position = Vector2(309, 209)
+scale = Vector2(5, 5)
+script = ExtResource("11_821i3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="front/book_front #1"]
+position = Vector2(-1, 0.5)
+shape = SubResource("RectangleShape2D_m7h76")
+
+[node name="Sprite2D" type="Sprite2D" parent="front/book_front #1"]
+material = SubResource("ShaderMaterial_dd2ri")
+texture = ExtResource("13_w7b70")
+
+[node name="disappear_timer" type="Timer" parent="front/book_front #1"]
+
+[node name="replace_timer" type="Timer" parent="front/book_front #1"]
+
+[node name="book_front #2" type="Area2D" parent="front"]
+position = Vector2(335, 209)
+scale = Vector2(5, 5)
+script = ExtResource("11_821i3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="front/book_front #2"]
+position = Vector2(-1, 0.5)
+shape = SubResource("RectangleShape2D_8oev0")
+
+[node name="Sprite2D" type="Sprite2D" parent="front/book_front #2"]
+material = SubResource("ShaderMaterial_k5kew")
+texture = ExtResource("14_kq20x")
+
+[node name="disappear_timer" type="Timer" parent="front/book_front #2"]
+
+[node name="replace_timer" type="Timer" parent="front/book_front #2"]
+
+[node name="bottle_front #1" type="Area2D" parent="front"]
+position = Vector2(503, 306)
+scale = Vector2(5, 5)
+script = ExtResource("11_821i3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="front/bottle_front #1"]
+position = Vector2(-0.75, 0.75)
+shape = SubResource("RectangleShape2D_vgj77")
+
+[node name="Sprite2D" type="Sprite2D" parent="front/bottle_front #1"]
+material = SubResource("ShaderMaterial_xmc7j")
+texture = ExtResource("15_vcvoa")
+
+[node name="disappear_timer" type="Timer" parent="front/bottle_front #1"]
+
+[node name="replace_timer" type="Timer" parent="front/bottle_front #1"]
+
+[node name="lamp_front" parent="front" instance=ExtResource("7_2y0uy")]
+position = Vector2(420, 209)
+scale = Vector2(5, 5)
+
+[node name="painting_front #3" parent="front" instance=ExtResource("27_uccx3")]
+position = Vector2(561, 306)
+scale = Vector2(5, 5)
+
+[node name="painting_front #4" parent="front" instance=ExtResource("14_ls7no")]
+position = Vector2(470, 376)
+scale = Vector2(5, 5)
+
+[node name="plant_front #2" parent="front" instance=ExtResource("15_hvcse")]
+position = Vector2(466, 209)
+scale = Vector2(5, 5)
+
+[node name="plant_front #3" parent="front" instance=ExtResource("16_c6xuw")]
+position = Vector2(546, 377)
+scale = Vector2(5, 5)
+
+[node name="amogus" parent="front" instance=ExtResource("27_1mtiq")]
+position = Vector2(399, 375)
+scale = Vector2(5, 5)
+
+[node name="ball_front" type="Area2D" parent="front"]
+position = Vector2(328, 306)
+scale = Vector2(5, 5)
+script = ExtResource("11_821i3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="front/ball_front"]
+position = Vector2(-1, 2)
+shape = SubResource("RectangleShape2D_tjsl3")
+
+[node name="Sprite2D" type="Sprite2D" parent="front/ball_front"]
+material = SubResource("ShaderMaterial_ybab2")
+texture = ExtResource("26_od1po")
+
+[node name="disappear_timer" type="Timer" parent="front/ball_front"]
+
+[node name="replace_timer" type="Timer" parent="front/ball_front"]
+
+[node name="book_front #4" type="Area2D" parent="front"]
+position = Vector2(556, 209)
+scale = Vector2(5, 5)
+script = ExtResource("11_821i3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="front/book_front #4"]
+position = Vector2(-1, 0.5)
+shape = SubResource("RectangleShape2D_m2scc")
+
+[node name="Sprite2D" type="Sprite2D" parent="front/book_front #4"]
+material = SubResource("ShaderMaterial_y47xb")
+texture = ExtResource("24_w5rnm")
+
+[node name="disappear_timer" type="Timer" parent="front/book_front #4"]
+
+[node name="replace_timer" type="Timer" parent="front/book_front #4"]
+
+[node name="book_front #8" type="Area2D" parent="front"]
+position = Vector2(331, 379)
+scale = Vector2(4.5, 4.5)
+script = ExtResource("11_821i3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="front/book_front #8"]
+position = Vector2(-1, 0.5)
+shape = SubResource("RectangleShape2D_6igav")
+
+[node name="Sprite2D" type="Sprite2D" parent="front/book_front #8"]
+material = SubResource("ShaderMaterial_kpgrc")
+texture = ExtResource("64_crrws")
+
+[node name="disappear_timer" type="Timer" parent="front/book_front #8"]
+
+[node name="replace_timer" type="Timer" parent="front/book_front #8"]
+
+[node name="radio_front" parent="front" instance=ExtResource("65_pkccg")]
+position = Vector2(450, 326)
+scale = Vector2(5, 5)
+
+[node name="book_front #3 (diagonal)" parent="front" instance=ExtResource("66_gqu6e")]
+position = Vector2(355, 209)
+scale = Vector2(5, 5)
+
+[node name="left" type="Node2D" parent="."]
+
+[node name="book_right #2 (mid)" type="Area2D" parent="left"]
+position = Vector2(-288, 293)
+scale = Vector2(5, 5)
+script = ExtResource("27_4ehfd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="left/book_right #2 (mid)"]
+position = Vector2(1, -5)
+shape = SubResource("RectangleShape2D_gy05e")
+
+[node name="Sprite2D" type="Sprite2D" parent="left/book_right #2 (mid)"]
+material = SubResource("ShaderMaterial_f68v5")
+texture = ExtResource("28_3l63q")
+
+[node name="disappear_timer" type="Timer" parent="left/book_right #2 (mid)"]
+
+[node name="replace_timer" type="Timer" parent="left/book_right #2 (mid)"]
+
+[node name="box_right" type="Area2D" parent="left"]
+position = Vector2(-218, 565)
+scale = Vector2(5, 5)
+script = ExtResource("27_4ehfd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="left/box_right"]
+position = Vector2(0.75, -4)
+shape = SubResource("RectangleShape2D_jxts8")
+
+[node name="Sprite2D" type="Sprite2D" parent="left/box_right"]
+material = SubResource("ShaderMaterial_k31sr")
+texture = ExtResource("30_vvokb")
+
+[node name="disappear_timer" type="Timer" parent="left/box_right"]
+
+[node name="replace_timer" type="Timer" parent="left/box_right"]
+
+[node name="box_right (small)" type="Area2D" parent="left"]
+position = Vector2(-211, 484)
+scale = Vector2(5, 5)
+script = ExtResource("27_4ehfd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="left/box_right (small)"]
+position = Vector2(2.5, -4)
+shape = SubResource("RectangleShape2D_iyj1d")
+
+[node name="Sprite2D" type="Sprite2D" parent="left/box_right (small)"]
+material = SubResource("ShaderMaterial_mpk4n")
+texture = ExtResource("31_rl1og")
+
+[node name="disappear_timer" type="Timer" parent="left/box_right (small)"]
+
+[node name="replace_timer" type="Timer" parent="left/box_right (small)"]
+
+[node name="cup_right #1" type="Area2D" parent="left"]
+position = Vector2(-177, 299)
+scale = Vector2(5, 5)
+script = ExtResource("27_4ehfd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="left/cup_right #1"]
+position = Vector2(0.5, -2.5)
+shape = SubResource("RectangleShape2D_cc0sg")
+
+[node name="Sprite2D" type="Sprite2D" parent="left/cup_right #1"]
+material = SubResource("ShaderMaterial_5l7sg")
+texture = ExtResource("32_4dei8")
+
+[node name="disappear_timer" type="Timer" parent="left/cup_right #1"]
+
+[node name="replace_timer" type="Timer" parent="left/cup_right #1"]
+
+[node name="painting_right #1" type="Area2D" parent="left"]
+position = Vector2(-261, 358)
+scale = Vector2(5, 5)
+script = ExtResource("27_4ehfd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="left/painting_right #1"]
+position = Vector2(1.25, -3.5)
+shape = SubResource("RectangleShape2D_xjf5e")
+
+[node name="Sprite2D" type="Sprite2D" parent="left/painting_right #1"]
+material = SubResource("ShaderMaterial_4gn58")
+texture = ExtResource("33_0bo7l")
+
+[node name="disappear_timer" type="Timer" parent="left/painting_right #1"]
+
+[node name="replace_timer" type="Timer" parent="left/painting_right #1"]
+
+[node name="painting_right #3" type="Area2D" parent="left"]
+position = Vector2(121, 306)
+scale = Vector2(5, 5)
+script = ExtResource("27_4ehfd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="left/painting_right #3"]
+position = Vector2(1.5, -3.75)
+shape = SubResource("RectangleShape2D_g5svc")
+
+[node name="Sprite2D" type="Sprite2D" parent="left/painting_right #3"]
+material = SubResource("ShaderMaterial_7aso2")
+texture = ExtResource("35_am2cv")
+
+[node name="disappear_timer" type="Timer" parent="left/painting_right #3"]
+
+[node name="replace_timer" type="Timer" parent="left/painting_right #3"]
+
+[node name="plant_right #1" type="Area2D" parent="left"]
+position = Vector2(49, 312)
+scale = Vector2(5, 5)
+script = ExtResource("27_4ehfd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="left/plant_right #1"]
+position = Vector2(1, -3)
+shape = SubResource("RectangleShape2D_5nto5")
+
+[node name="Sprite2D" type="Sprite2D" parent="left/plant_right #1"]
+material = SubResource("ShaderMaterial_a06qb")
+texture = ExtResource("36_ysnoc")
+
+[node name="disappear_timer" type="Timer" parent="left/plant_right #1"]
+
+[node name="replace_timer" type="Timer" parent="left/plant_right #1"]
+
+[node name="plant_right #2" type="Area2D" parent="left"]
+position = Vector2(-197, 358)
+scale = Vector2(5, 5)
+script = ExtResource("27_4ehfd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="left/plant_right #2"]
+position = Vector2(1, -3)
+shape = SubResource("RectangleShape2D_wdcy7")
+
+[node name="Sprite2D" type="Sprite2D" parent="left/plant_right #2"]
+material = SubResource("ShaderMaterial_1prvc")
+texture = ExtResource("37_gh3j0")
+
+[node name="disappear_timer" type="Timer" parent="left/plant_right #2"]
+
+[node name="replace_timer" type="Timer" parent="left/plant_right #2"]
+
+[node name="plant_right #3" type="Area2D" parent="left"]
+position = Vector2(-311, 578)
+scale = Vector2(5, 5)
+script = ExtResource("27_4ehfd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="left/plant_right #3"]
+position = Vector2(1, -3)
+shape = SubResource("RectangleShape2D_voy3f")
+
+[node name="Sprite2D" type="Sprite2D" parent="left/plant_right #3"]
+material = SubResource("ShaderMaterial_85rka")
+texture = ExtResource("38_cveqn")
+
+[node name="disappear_timer" type="Timer" parent="left/plant_right #3"]
+
+[node name="replace_timer" type="Timer" parent="left/plant_right #3"]
+
+[node name="rabbit thingy" type="Area2D" parent="left"]
+position = Vector2(-218, 228)
+scale = Vector2(5, 5)
+script = ExtResource("27_4ehfd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="left/rabbit thingy"]
+position = Vector2(-0.5, -4.5)
+shape = SubResource("RectangleShape2D_p4y2b")
+
+[node name="Sprite2D" type="Sprite2D" parent="left/rabbit thingy"]
+material = SubResource("ShaderMaterial_pgmge")
+texture = ExtResource("40_k6hct")
+
+[node name="disappear_timer" type="Timer" parent="left/rabbit thingy"]
+
+[node name="replace_timer" type="Timer" parent="left/rabbit thingy"]
+
+[node name="toy_car" type="Area2D" parent="left"]
+position = Vector2(88, 393)
+scale = Vector2(5, 5)
+script = ExtResource("27_4ehfd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="left/toy_car"]
+position = Vector2(3.5, -3.75)
+shape = SubResource("RectangleShape2D_v6x63")
+
+[node name="Sprite2D" type="Sprite2D" parent="left/toy_car"]
+material = SubResource("ShaderMaterial_mvwfj")
+texture = ExtResource("41_xnp2x")
+
+[node name="disappear_timer" type="Timer" parent="left/toy_car"]
+
+[node name="replace_timer" type="Timer" parent="left/toy_car"]
+
+[node name="book_right #2 (midish top)3" type="Area2D" parent="left"]
+position = Vector2(-265, 223)
+scale = Vector2(5, 5)
+script = ExtResource("27_4ehfd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="left/book_right #2 (midish top)3"]
+position = Vector2(1.5, -5)
+shape = SubResource("RectangleShape2D_i8csj")
+
+[node name="Sprite2D" type="Sprite2D" parent="left/book_right #2 (midish top)3"]
+material = SubResource("ShaderMaterial_hwla6")
+texture = ExtResource("59_mx2wk")
+
+[node name="disappear_timer" type="Timer" parent="left/book_right #2 (midish top)3"]
+
+[node name="replace_timer" type="Timer" parent="left/book_right #2 (midish top)3"]
+
+[node name="book_right #2 (midish top)4" type="Area2D" parent="left"]
+position = Vector2(-293, 424)
+scale = Vector2(5, 5)
+script = ExtResource("27_4ehfd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="left/book_right #2 (midish top)4"]
+position = Vector2(1.5, -5)
+shape = SubResource("RectangleShape2D_7664f")
+
+[node name="Sprite2D" type="Sprite2D" parent="left/book_right #2 (midish top)4"]
+material = SubResource("ShaderMaterial_3oj71")
+texture = ExtResource("61_xrdfg")
+
+[node name="disappear_timer" type="Timer" parent="left/book_right #2 (midish top)4"]
+
+[node name="replace_timer" type="Timer" parent="left/book_right #2 (midish top)4"]
+
+[node name="right" type="Node2D" parent="."]
+
+[node name="book_left #1" type="Area2D" parent="right"]
+position = Vector2(1058, 423)
+scale = Vector2(5, 5)
+script = ExtResource("52_epjwg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="right/book_left #1"]
+position = Vector2(-2.90001, -2.5)
+shape = SubResource("RectangleShape2D_6dtyi")
+
+[node name="Sprite2D" type="Sprite2D" parent="right/book_left #1"]
+material = SubResource("ShaderMaterial_sjuny")
+texture = ExtResource("53_wg774")
+
+[node name="disappear_timer" type="Timer" parent="right/book_left #1"]
+
+[node name="replace_timer" type="Timer" parent="right/book_left #1"]
+
+[node name="book_left #2" type="Area2D" parent="right"]
+position = Vector2(1090, 428)
+scale = Vector2(5, 5)
+script = ExtResource("52_epjwg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="right/book_left #2"]
+position = Vector2(-2.8, -2.5)
+shape = SubResource("RectangleShape2D_d7ui0")
+
+[node name="Sprite2D" type="Sprite2D" parent="right/book_left #2"]
+material = SubResource("ShaderMaterial_s12xu")
+texture = ExtResource("54_jn6hg")
+
+[node name="disappear_timer" type="Timer" parent="right/book_left #2"]
+
+[node name="replace_timer" type="Timer" parent="right/book_left #2"]
+
+[node name="book_left #3" type="Area2D" parent="right"]
+position = Vector2(1122, 434)
+scale = Vector2(5, 5)
+script = ExtResource("52_epjwg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="right/book_left #3"]
+position = Vector2(-1, -2.5)
+shape = SubResource("RectangleShape2D_ec2g5")
+
+[node name="Sprite2D" type="Sprite2D" parent="right/book_left #3"]
+material = SubResource("ShaderMaterial_6ogbu")
+texture = ExtResource("55_p2rhd")
+
+[node name="disappear_timer" type="Timer" parent="right/book_left #3"]
+
+[node name="replace_timer" type="Timer" parent="right/book_left #3"]
+
+[node name="book_left #4" type="Area2D" parent="right"]
+position = Vector2(1060, 509)
+scale = Vector2(5, 5)
+script = ExtResource("52_epjwg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="right/book_left #4"]
+position = Vector2(-2.8, -2.5)
+shape = SubResource("RectangleShape2D_cax62")
+
+[node name="Sprite2D" type="Sprite2D" parent="right/book_left #4"]
+material = SubResource("ShaderMaterial_uu0yk")
+texture = ExtResource("56_xcvq7")
+
+[node name="disappear_timer" type="Timer" parent="right/book_left #4"]
+
+[node name="replace_timer" type="Timer" parent="right/book_left #4"]
+
+[node name="book_left #5" type="Area2D" parent="right"]
+position = Vector2(1092, 514)
+scale = Vector2(5, 5)
+script = ExtResource("52_epjwg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="right/book_left #5"]
+position = Vector2(-1, -2.5)
+shape = SubResource("RectangleShape2D_dxydb")
+
+[node name="Sprite2D" type="Sprite2D" parent="right/book_left #5"]
+material = SubResource("ShaderMaterial_ypc2e")
+texture = ExtResource("57_k316s")
+
+[node name="disappear_timer" type="Timer" parent="right/book_left #5"]
+
+[node name="replace_timer" type="Timer" parent="right/book_left #5"]
+
+[node name="box_left" type="Area2D" parent="right"]
+position = Vector2(1235, 540)
+scale = Vector2(5, 5)
+script = ExtResource("52_epjwg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="right/box_left"]
+position = Vector2(1, -1)
+shape = SubResource("RectangleShape2D_romrs")
+
+[node name="Sprite2D" type="Sprite2D" parent="right/box_left"]
+material = SubResource("ShaderMaterial_ppp1t")
+texture = ExtResource("58_pbdl3")
+
+[node name="disappear_timer" type="Timer" parent="right/box_left"]
+
+[node name="replace_timer" type="Timer" parent="right/box_left"]
+
+[node name="plant_left #1" type="Area2D" parent="right"]
+position = Vector2(1131, 526)
+scale = Vector2(5, 5)
+script = ExtResource("52_epjwg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="right/plant_left #1"]
+position = Vector2(-2, 0)
+shape = SubResource("RectangleShape2D_l6rxy")
+
+[node name="Sprite2D" type="Sprite2D" parent="right/plant_left #1"]
+material = SubResource("ShaderMaterial_pa48e")
+texture = ExtResource("59_eg5va")
+
+[node name="disappear_timer" type="Timer" parent="right/plant_left #1"]
+
+[node name="replace_timer" type="Timer" parent="right/plant_left #1"]
+
+[node name="plant_left #2" type="Area2D" parent="right"]
+position = Vector2(1157, 444)
+scale = Vector2(5, 5)
+script = ExtResource("52_epjwg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="right/plant_left #2"]
+position = Vector2(-2, 0)
+shape = SubResource("RectangleShape2D_6kewx")
+
+[node name="Sprite2D" type="Sprite2D" parent="right/plant_left #2"]
+material = SubResource("ShaderMaterial_ffd04")
+texture = ExtResource("60_w4pt6")
+
+[node name="disappear_timer" type="Timer" parent="right/plant_left #2"]
+
+[node name="replace_timer" type="Timer" parent="right/plant_left #2"]
+
+[node name="plant_left #3" type="Area2D" parent="right"]
+position = Vector2(1222, 295)
+scale = Vector2(5, 5)
+script = ExtResource("52_epjwg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="right/plant_left #3"]
+position = Vector2(-2, 0.5)
+shape = SubResource("RectangleShape2D_ec72m")
+
+[node name="Sprite2D" type="Sprite2D" parent="right/plant_left #3"]
+material = SubResource("ShaderMaterial_3rf8w")
+texture = ExtResource("61_gs0ii")
+
+[node name="disappear_timer" type="Timer" parent="right/plant_left #3"]
+
+[node name="replace_timer" type="Timer" parent="right/plant_left #3"]
+
+[node name="toy_left" type="Area2D" parent="right"]
+position = Vector2(1207, 454)
+scale = Vector2(5, 5)
+script = ExtResource("52_epjwg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="right/toy_left"]
+position = Vector2(-1, -2)
+shape = SubResource("RectangleShape2D_4nmk6")
+
+[node name="Sprite2D" type="Sprite2D" parent="right/toy_left"]
+material = SubResource("ShaderMaterial_f0fd4")
+texture = ExtResource("62_umsdu")
+
+[node name="disappear_timer" type="Timer" parent="right/toy_left"]
+
+[node name="replace_timer" type="Timer" parent="right/toy_left"]
+
+[node name="toy_left #2" type="Area2D" parent="right"]
+position = Vector2(1139, 284)
+scale = Vector2(5, 5)
+script = ExtResource("52_epjwg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="right/toy_left #2"]
+position = Vector2(-2, -1.75)
+shape = SubResource("RectangleShape2D_d4pv8")
+
+[node name="Sprite2D" type="Sprite2D" parent="right/toy_left #2"]
+material = SubResource("ShaderMaterial_7oewi")
+texture = ExtResource("63_w4mjb")
+
+[node name="disappear_timer" type="Timer" parent="right/toy_left #2"]
+
+[node name="replace_timer" type="Timer" parent="right/toy_left #2"]
+
+[node name="trophy_left" type="Area2D" parent="right"]
+position = Vector2(1043, 197)
+scale = Vector2(5, 5)
+script = ExtResource("52_epjwg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="right/trophy_left"]
+position = Vector2(-1.5, -1.5)
+shape = SubResource("RectangleShape2D_egj6j")
+
+[node name="Sprite2D" type="Sprite2D" parent="right/trophy_left"]
+material = SubResource("ShaderMaterial_ur4al")
+texture = ExtResource("64_bi7i4")
+
+[node name="disappear_timer" type="Timer" parent="right/trophy_left"]
+
+[node name="replace_timer" type="Timer" parent="right/trophy_left"]
+
+[node name="NightmareHand" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(998, 607)
+scale = Vector2(8, 8)
+texture = ExtResource("60_afftr")
+
+[node name="Bed" type="Sprite2D" parent="."]
+position = Vector2(570, 261)
+scale = Vector2(5.71833, 7.54167)
+texture = ExtResource("4_k5nc5")
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -1183.0
+offset_top = -94.0
+offset_right = 2109.0
+offset_bottom = 719.0
+color = Color(0, 0, 0, 0.556863)
+metadata/_edit_lock_ = true
+
+[node name="Player" parent="." instance=ExtResource("2_v7q06")]
+position = Vector2(412, 302)
+metadata/_edit_lock_ = true
+
+[node name="gui" type="CanvasLayer" parent="."]
+scale = Vector2(2.09, 2.09)
+transform = Transform2D(2.09, 0, 0, 2.09, 0, 0)
+
+[node name="insanity_bar" parent="gui" instance=ExtResource("89_ca27q")]
+material = SubResource("CanvasItemMaterial_teyk4")
+offset_left = 242.584
+offset_top = 8.13397
+offset_right = 1422.59
+offset_bottom = 636.138
+scale = Vector2(0.715, 0.715)
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="Time" type="Label" parent="gui"]
+offset_left = 728.708
+offset_top = 3.82775
+offset_right = 828.708
+offset_bottom = 42.8278
+theme_override_font_sizes/font_size = 32
+text = "Time"
+script = ExtResource("70_mxsfs")
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="num_terrors" type="Label" parent="gui"]
+texture_filter = 1
+offset_left = 12.9187
+offset_top = 405.263
+offset_right = 160.919
+offset_bottom = 435.263
+theme_override_fonts/font = ExtResource("69_6qln4")
+theme_override_font_sizes/font_size = 24
+text = "Terrors:"
+script = ExtResource("55_73vhr")
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="grace_period time" type="Label" parent="gui"]
+texture_filter = 1
+offset_left = 15.311
+offset_top = 45.933
+offset_right = 163.311
+offset_bottom = 75.933
+theme_override_fonts/font = ExtResource("69_6qln4")
+theme_override_font_sizes/font_size = 24
+text = "Grace
+"
+script = ExtResource("73_qo6vw")
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="reminder" type="Label" parent="gui"]
+texture_filter = 1
+offset_left = 128.708
+offset_top = 361.722
+offset_right = 600.708
+offset_bottom = 391.722
+theme_override_fonts/font = ExtResource("69_6qln4")
+theme_override_font_sizes/font_size = 24
+text = "Remember the original room"
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="vignette" type="ColorRect" parent="gui"]
+material = SubResource("ShaderMaterial_xsrb1")
+offset_right = 862.0
+offset_bottom = 460.0
+color = Color(0, 0, 0, 1)
+
+[node name="eye" type="Node2D" parent="."]
+script = ExtResource("69_p58c2")
+
+[node name="eye1" type="PointLight2D" parent="eye"]
+position = Vector2(1715, 169)
+scale = Vector2(0.484375, 0.484375)
+texture = ExtResource("73_av7x5")
+texture_scale = 0.76
+
+[node name="eye2" type="PointLight2D" parent="eye"]
+position = Vector2(1737, 239)
+scale = Vector2(0.484375, 0.484375)
+texture = ExtResource("73_av7x5")
+texture_scale = 0.76
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+visible = false
+offset_left = -1128.0
+offset_top = -86.0
+offset_right = 2164.0
+offset_bottom = 727.0
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_4va1l")
+}
+
+[node name="win_time" type="Timer" parent="."]
+wait_time = 300.0
+
+[node name="grace_period" type="Timer" parent="."]
+
+[node name="sfx" type="Node2D" parent="."]
+
+[node name="Rain" type="AudioStreamPlayer2D" parent="sfx"]
+stream = ExtResource("76_6cte1")
+volume_db = -8.0
+
+[node name="ambient" type="AudioStreamPlayer2D" parent="sfx"]
+stream = ExtResource("77_gwi2p")
+volume_db = -22.307
+
+[node name="slow" type="AudioStreamPlayer2D" parent="sfx"]
+stream = ExtResource("78_yqapu")
+volume_db = -23.332
+
+[node name="wind" type="AudioStreamPlayer2D" parent="sfx"]
+stream = ExtResource("79_1bgm0")
+volume_db = 2.668
+
+[connection signal="mouse_entered" from="front/book_front #1" to="front/book_front #1" method="_on_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="front/book_front #1" to="front/book_front #1" method="_on_mouse_exited" flags=18]
+[connection signal="timeout" from="front/book_front #1/disappear_timer" to="front/book_front #1" method="_on_disappear_timer_timeout" flags=18]
+[connection signal="timeout" from="front/book_front #1/replace_timer" to="front/book_front #1" method="_on_replace_timer_timeout" flags=18]
+[connection signal="mouse_entered" from="front/book_front #2" to="front/book_front #2" method="_on_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="front/book_front #2" to="front/book_front #2" method="_on_mouse_exited" flags=18]
+[connection signal="timeout" from="front/book_front #2/disappear_timer" to="front/book_front #2" method="_on_disappear_timer_timeout" flags=18]
+[connection signal="timeout" from="front/book_front #2/replace_timer" to="front/book_front #2" method="_on_replace_timer_timeout" flags=18]
+[connection signal="mouse_entered" from="front/bottle_front #1" to="front/bottle_front #1" method="_on_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="front/bottle_front #1" to="front/bottle_front #1" method="_on_mouse_exited" flags=18]
+[connection signal="timeout" from="front/bottle_front #1/disappear_timer" to="front/bottle_front #1" method="_on_disappear_timer_timeout" flags=18]
+[connection signal="timeout" from="front/bottle_front #1/replace_timer" to="front/bottle_front #1" method="_on_replace_timer_timeout" flags=18]
+[connection signal="mouse_entered" from="front/ball_front" to="front/ball_front" method="_on_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="front/ball_front" to="front/ball_front" method="_on_mouse_exited" flags=18]
+[connection signal="timeout" from="front/ball_front/disappear_timer" to="front/ball_front" method="_on_disappear_timer_timeout" flags=18]
+[connection signal="timeout" from="front/ball_front/replace_timer" to="front/ball_front" method="_on_replace_timer_timeout" flags=18]
+[connection signal="mouse_entered" from="front/book_front #4" to="front/book_front #4" method="_on_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="front/book_front #4" to="front/book_front #4" method="_on_mouse_exited" flags=18]
+[connection signal="timeout" from="front/book_front #4/disappear_timer" to="front/book_front #4" method="_on_disappear_timer_timeout" flags=18]
+[connection signal="timeout" from="front/book_front #4/replace_timer" to="front/book_front #4" method="_on_replace_timer_timeout" flags=18]
+[connection signal="mouse_entered" from="front/book_front #8" to="front/book_front #8" method="_on_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="front/book_front #8" to="front/book_front #8" method="_on_mouse_exited" flags=18]
+[connection signal="timeout" from="front/book_front #8/disappear_timer" to="front/book_front #8" method="_on_disappear_timer_timeout" flags=18]
+[connection signal="timeout" from="front/book_front #8/replace_timer" to="front/book_front #8" method="_on_replace_timer_timeout" flags=18]
+[connection signal="mouse_entered" from="left/book_right #2 (mid)" to="left/book_right #2 (mid)" method="_on_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="left/book_right #2 (mid)" to="left/book_right #2 (mid)" method="_on_mouse_exited" flags=18]
+[connection signal="timeout" from="left/book_right #2 (mid)/disappear_timer" to="left/book_right #2 (mid)" method="_on_disappear_timer_timeout" flags=18]
+[connection signal="timeout" from="left/book_right #2 (mid)/replace_timer" to="left/book_right #2 (mid)" method="_on_replace_timer_timeout" flags=18]
+[connection signal="mouse_entered" from="left/box_right" to="left/box_right" method="_on_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="left/box_right" to="left/box_right" method="_on_mouse_exited" flags=18]
+[connection signal="timeout" from="left/box_right/disappear_timer" to="left/box_right" method="_on_disappear_timer_timeout" flags=18]
+[connection signal="timeout" from="left/box_right/replace_timer" to="left/box_right" method="_on_replace_timer_timeout" flags=18]
+[connection signal="mouse_entered" from="left/box_right (small)" to="left/box_right (small)" method="_on_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="left/box_right (small)" to="left/box_right (small)" method="_on_mouse_exited" flags=18]
+[connection signal="timeout" from="left/box_right (small)/disappear_timer" to="left/box_right (small)" method="_on_disappear_timer_timeout" flags=18]
+[connection signal="timeout" from="left/box_right (small)/replace_timer" to="left/box_right (small)" method="_on_replace_timer_timeout" flags=18]
+[connection signal="mouse_entered" from="left/cup_right #1" to="left/cup_right #1" method="_on_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="left/cup_right #1" to="left/cup_right #1" method="_on_mouse_exited" flags=18]
+[connection signal="timeout" from="left/cup_right #1/disappear_timer" to="left/cup_right #1" method="_on_disappear_timer_timeout" flags=18]
+[connection signal="timeout" from="left/cup_right #1/replace_timer" to="left/cup_right #1" method="_on_replace_timer_timeout" flags=18]
+[connection signal="mouse_entered" from="left/painting_right #1" to="left/painting_right #1" method="_on_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="left/painting_right #1" to="left/painting_right #1" method="_on_mouse_exited" flags=18]
+[connection signal="timeout" from="left/painting_right #1/disappear_timer" to="left/painting_right #1" method="_on_disappear_timer_timeout" flags=18]
+[connection signal="timeout" from="left/painting_right #1/replace_timer" to="left/painting_right #1" method="_on_replace_timer_timeout" flags=18]
+[connection signal="mouse_entered" from="left/painting_right #3" to="left/painting_right #3" method="_on_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="left/painting_right #3" to="left/painting_right #3" method="_on_mouse_exited" flags=18]
+[connection signal="timeout" from="left/painting_right #3/disappear_timer" to="left/painting_right #3" method="_on_disappear_timer_timeout" flags=18]
+[connection signal="timeout" from="left/painting_right #3/replace_timer" to="left/painting_right #3" method="_on_replace_timer_timeout" flags=18]
+[connection signal="mouse_entered" from="left/plant_right #1" to="left/plant_right #1" method="_on_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="left/plant_right #1" to="left/plant_right #1" method="_on_mouse_exited" flags=18]
+[connection signal="timeout" from="left/plant_right #1/disappear_timer" to="left/plant_right #1" method="_on_disappear_timer_timeout" flags=18]
+[connection signal="timeout" from="left/plant_right #1/replace_timer" to="left/plant_right #1" method="_on_replace_timer_timeout" flags=18]
+[connection signal="mouse_entered" from="left/plant_right #2" to="left/plant_right #2" method="_on_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="left/plant_right #2" to="left/plant_right #2" method="_on_mouse_exited" flags=18]
+[connection signal="timeout" from="left/plant_right #2/disappear_timer" to="left/plant_right #2" method="_on_disappear_timer_timeout" flags=18]
+[connection signal="timeout" from="left/plant_right #2/replace_timer" to="left/plant_right #2" method="_on_replace_timer_timeout" flags=18]
+[connection signal="mouse_entered" from="left/plant_right #3" to="left/plant_right #3" method="_on_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="left/plant_right #3" to="left/plant_right #3" method="_on_mouse_exited" flags=18]
+[connection signal="timeout" from="left/plant_right #3/disappear_timer" to="left/plant_right #3" method="_on_disappear_timer_timeout" flags=18]
+[connection signal="timeout" from="left/plant_right #3/replace_timer" to="left/plant_right #3" method="_on_replace_timer_timeout" flags=18]
+[connection signal="mouse_entered" from="left/rabbit thingy" to="left/rabbit thingy" method="_on_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="left/rabbit thingy" to="left/rabbit thingy" method="_on_mouse_exited" flags=18]
+[connection signal="timeout" from="left/rabbit thingy/disappear_timer" to="left/rabbit thingy" method="_on_disappear_timer_timeout" flags=18]
+[connection signal="timeout" from="left/rabbit thingy/replace_timer" to="left/rabbit thingy" method="_on_replace_timer_timeout" flags=18]
+[connection signal="mouse_entered" from="left/toy_car" to="left/toy_car" method="_on_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="left/toy_car" to="left/toy_car" method="_on_mouse_exited" flags=18]
+[connection signal="timeout" from="left/toy_car/disappear_timer" to="left/toy_car" method="_on_disappear_timer_timeout" flags=18]
+[connection signal="timeout" from="left/toy_car/replace_timer" to="left/toy_car" method="_on_replace_timer_timeout" flags=18]
+[connection signal="mouse_entered" from="left/book_right #2 (midish top)3" to="left/book_right #2 (midish top)3" method="_on_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="left/book_right #2 (midish top)3" to="left/book_right #2 (midish top)3" method="_on_mouse_exited" flags=18]
+[connection signal="timeout" from="left/book_right #2 (midish top)3/disappear_timer" to="left/book_right #2 (midish top)3" method="_on_disappear_timer_timeout" flags=18]
+[connection signal="timeout" from="left/book_right #2 (midish top)3/replace_timer" to="left/book_right #2 (midish top)3" method="_on_replace_timer_timeout" flags=18]
+[connection signal="mouse_entered" from="left/book_right #2 (midish top)4" to="left/book_right #2 (midish top)4" method="_on_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="left/book_right #2 (midish top)4" to="left/book_right #2 (midish top)4" method="_on_mouse_exited" flags=18]
+[connection signal="timeout" from="left/book_right #2 (midish top)4/disappear_timer" to="left/book_right #2 (midish top)4" method="_on_disappear_timer_timeout" flags=18]
+[connection signal="timeout" from="left/book_right #2 (midish top)4/replace_timer" to="left/book_right #2 (midish top)4" method="_on_replace_timer_timeout" flags=18]
+[connection signal="mouse_entered" from="right/book_left #1" to="right/book_left #1" method="_on_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="right/book_left #1" to="right/book_left #1" method="_on_mouse_exited" flags=18]
+[connection signal="timeout" from="right/book_left #1/disappear_timer" to="right/book_left #1" method="_on_disappear_timer_timeout" flags=18]
+[connection signal="timeout" from="right/book_left #1/replace_timer" to="right/book_left #1" method="_on_replace_timer_timeout" flags=18]
+[connection signal="mouse_entered" from="right/book_left #2" to="right/book_left #2" method="_on_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="right/book_left #2" to="right/book_left #2" method="_on_mouse_exited" flags=18]
+[connection signal="timeout" from="right/book_left #2/disappear_timer" to="right/book_left #2" method="_on_disappear_timer_timeout" flags=18]
+[connection signal="timeout" from="right/book_left #2/replace_timer" to="right/book_left #2" method="_on_replace_timer_timeout" flags=18]
+[connection signal="mouse_entered" from="right/book_left #3" to="right/book_left #3" method="_on_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="right/book_left #3" to="right/book_left #3" method="_on_mouse_exited" flags=18]
+[connection signal="timeout" from="right/book_left #3/disappear_timer" to="right/book_left #3" method="_on_disappear_timer_timeout" flags=18]
+[connection signal="timeout" from="right/book_left #3/replace_timer" to="right/book_left #3" method="_on_replace_timer_timeout" flags=18]
+[connection signal="mouse_entered" from="right/book_left #4" to="right/book_left #4" method="_on_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="right/book_left #4" to="right/book_left #4" method="_on_mouse_exited" flags=18]
+[connection signal="timeout" from="right/book_left #4/disappear_timer" to="right/book_left #4" method="_on_disappear_timer_timeout" flags=18]
+[connection signal="timeout" from="right/book_left #4/replace_timer" to="right/book_left #4" method="_on_replace_timer_timeout" flags=18]
+[connection signal="mouse_entered" from="right/book_left #5" to="right/book_left #5" method="_on_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="right/book_left #5" to="right/book_left #5" method="_on_mouse_exited" flags=18]
+[connection signal="timeout" from="right/book_left #5/disappear_timer" to="right/book_left #5" method="_on_disappear_timer_timeout" flags=18]
+[connection signal="timeout" from="right/book_left #5/replace_timer" to="right/book_left #5" method="_on_replace_timer_timeout" flags=18]
+[connection signal="mouse_entered" from="right/box_left" to="right/box_left" method="_on_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="right/box_left" to="right/box_left" method="_on_mouse_exited" flags=18]
+[connection signal="timeout" from="right/box_left/disappear_timer" to="right/box_left" method="_on_disappear_timer_timeout" flags=18]
+[connection signal="timeout" from="right/box_left/replace_timer" to="right/box_left" method="_on_replace_timer_timeout" flags=18]
+[connection signal="mouse_entered" from="right/plant_left #1" to="right/plant_left #1" method="_on_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="right/plant_left #1" to="right/plant_left #1" method="_on_mouse_exited" flags=18]
+[connection signal="timeout" from="right/plant_left #1/disappear_timer" to="right/plant_left #1" method="_on_disappear_timer_timeout" flags=18]
+[connection signal="timeout" from="right/plant_left #1/replace_timer" to="right/plant_left #1" method="_on_replace_timer_timeout" flags=18]
+[connection signal="mouse_entered" from="right/plant_left #2" to="right/plant_left #2" method="_on_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="right/plant_left #2" to="right/plant_left #2" method="_on_mouse_exited" flags=18]
+[connection signal="timeout" from="right/plant_left #2/disappear_timer" to="right/plant_left #2" method="_on_disappear_timer_timeout" flags=18]
+[connection signal="timeout" from="right/plant_left #2/replace_timer" to="right/plant_left #2" method="_on_replace_timer_timeout" flags=18]
+[connection signal="mouse_entered" from="right/plant_left #3" to="right/plant_left #3" method="_on_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="right/plant_left #3" to="right/plant_left #3" method="_on_mouse_exited" flags=18]
+[connection signal="timeout" from="right/plant_left #3/disappear_timer" to="right/plant_left #3" method="_on_disappear_timer_timeout" flags=18]
+[connection signal="timeout" from="right/plant_left #3/replace_timer" to="right/plant_left #3" method="_on_replace_timer_timeout" flags=18]
+[connection signal="mouse_entered" from="right/toy_left" to="right/toy_left" method="_on_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="right/toy_left" to="right/toy_left" method="_on_mouse_exited" flags=18]
+[connection signal="timeout" from="right/toy_left/disappear_timer" to="right/toy_left" method="_on_disappear_timer_timeout" flags=18]
+[connection signal="timeout" from="right/toy_left/replace_timer" to="right/toy_left" method="_on_replace_timer_timeout" flags=18]
+[connection signal="mouse_entered" from="right/toy_left #2" to="right/toy_left #2" method="_on_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="right/toy_left #2" to="right/toy_left #2" method="_on_mouse_exited" flags=18]
+[connection signal="timeout" from="right/toy_left #2/disappear_timer" to="right/toy_left #2" method="_on_disappear_timer_timeout" flags=18]
+[connection signal="timeout" from="right/toy_left #2/replace_timer" to="right/toy_left #2" method="_on_replace_timer_timeout" flags=18]
+[connection signal="mouse_entered" from="right/trophy_left" to="right/trophy_left" method="_on_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="right/trophy_left" to="right/trophy_left" method="_on_mouse_exited" flags=18]
+[connection signal="timeout" from="right/trophy_left/disappear_timer" to="right/trophy_left" method="_on_disappear_timer_timeout" flags=18]
+[connection signal="timeout" from="right/trophy_left/replace_timer" to="right/trophy_left" method="_on_replace_timer_timeout" flags=18]
+[connection signal="timeout" from="win_time" to="." method="_on_win_time_timeout"]
+[connection signal="timeout" from="grace_period" to="." method="_on_grace_period_timeout"]
+[connection signal="finished" from="sfx/Rain" to="." method="_on_rain_finished"]
+[connection signal="finished" from="sfx/ambient" to="." method="_on_ambient_finished"]
+[connection signal="finished" from="sfx/slow" to="." method="_on_slow_finished"]
+[connection signal="finished" from="sfx/wind" to="." method="_on_wind_finished"]
